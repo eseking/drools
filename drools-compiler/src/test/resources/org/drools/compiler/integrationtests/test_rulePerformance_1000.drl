@@ -1,0 +1,7037 @@
+/*
+ * Copyright 2015 JBoss Inc
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * 
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
+package org.drools.compiler.test
+
+import org.drools.compiler.Sensor
+import org.drools.compiler.Message
+
+global java.util.List list
+
+
+rule "Start" 
+salience 10 
+	when 
+		Input : Sensor ( pressure == "10" ) 
+	then 
+		Message message = new Message();
+		message.setStatus(10);
+		insert(message);
+		list.add( "Start" );
+end 
+rule "rule 1" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "1") 
+	then 
+		list.add( "Rule 1" ); 
+end 
+rule "rule 2" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "2") 
+	then 
+		list.add( "Rule 2" ); 
+end 
+rule "rule 3" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "3") 
+	then 
+		list.add( "Rule 3" ); 
+end 
+rule "rule 4" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "4") 
+	then 
+		list.add( "Rule 4" ); 
+end 
+rule "rule 5" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "5") 
+	then 
+		list.add( "Rule 5" ); 
+end 
+rule "rule 6" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "6") 
+	then 
+		list.add( "Rule 6" ); 
+end 
+rule "rule 7" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "7") 
+	then 
+		list.add( "Rule 7" ); 
+end 
+rule "rule 8" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "8") 
+	then 
+		list.add( "Rule 8" ); 
+end 
+rule "rule 9" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "9") 
+	then 
+		list.add( "Rule 9" ); 
+end 
+rule "rule 10" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "10") 
+	then 
+		list.add( "Rule 10" ); 
+end 
+rule "rule 11" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "11") 
+	then 
+		list.add( "Rule 11" ); 
+end 
+rule "rule 12" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "12") 
+	then 
+		list.add( "Rule 12" ); 
+end 
+rule "rule 13" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "13") 
+	then 
+		list.add( "Rule 13" ); 
+end 
+rule "rule 14" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "14") 
+	then 
+		list.add( "Rule 14" ); 
+end 
+rule "rule 15" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "15") 
+	then 
+		list.add( "Rule 15" ); 
+end 
+rule "rule 16" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "16") 
+	then 
+		list.add( "Rule 16" ); 
+end 
+rule "rule 17" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "17") 
+	then 
+		list.add( "Rule 17" ); 
+end 
+rule "rule 18" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "18") 
+	then 
+		list.add( "Rule 18" ); 
+end 
+rule "rule 19" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "19") 
+	then 
+		list.add( "Rule 19" ); 
+end 
+rule "rule 20" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "20") 
+	then 
+		list.add( "Rule 20" ); 
+end 
+rule "rule 21" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "21") 
+	then 
+		list.add( "Rule 21" ); 
+end 
+rule "rule 22" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "22") 
+	then 
+		list.add( "Rule 22" ); 
+end 
+rule "rule 23" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "23") 
+	then 
+		list.add( "Rule 23" ); 
+end 
+rule "rule 24" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "24") 
+	then 
+		list.add( "Rule 24" ); 
+end 
+rule "rule 25" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "25") 
+	then 
+		list.add( "Rule 25" ); 
+end 
+rule "rule 26" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "26") 
+	then 
+		list.add( "Rule 26" ); 
+end 
+rule "rule 27" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "27") 
+	then 
+		list.add( "Rule 27" ); 
+end 
+rule "rule 28" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "28") 
+	then 
+		list.add( "Rule 28" ); 
+end 
+rule "rule 29" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "29") 
+	then 
+		list.add( "Rule 29" ); 
+end 
+rule "rule 30" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "30") 
+	then 
+		list.add( "Rule 30" ); 
+end 
+rule "rule 31" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "31") 
+	then 
+		list.add( "Rule 31" ); 
+end 
+rule "rule 32" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "32") 
+	then 
+		list.add( "Rule 32" ); 
+end 
+rule "rule 33" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "33") 
+	then 
+		list.add( "Rule 33" ); 
+end 
+rule "rule 34" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "34") 
+	then 
+		list.add( "Rule 34" ); 
+end 
+rule "rule 35" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "35") 
+	then 
+		list.add( "Rule 35" ); 
+end 
+rule "rule 36" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "36") 
+	then 
+		list.add( "Rule 36" ); 
+end 
+rule "rule 37" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "37") 
+	then 
+		list.add( "Rule 37" ); 
+end 
+rule "rule 38" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "38") 
+	then 
+		list.add( "Rule 38" ); 
+end 
+rule "rule 39" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "39") 
+	then 
+		list.add( "Rule 39" ); 
+end 
+rule "rule 40" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "40") 
+	then 
+		list.add( "Rule 40" ); 
+end 
+rule "rule 41" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "41") 
+	then 
+		list.add( "Rule 41" ); 
+end 
+rule "rule 42" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "42") 
+	then 
+		list.add( "Rule 42" ); 
+end 
+rule "rule 43" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "43") 
+	then 
+		list.add( "Rule 43" ); 
+end 
+rule "rule 44" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "44") 
+	then 
+		list.add( "Rule 44" ); 
+end 
+rule "rule 45" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "45") 
+	then 
+		list.add( "Rule 45" ); 
+end 
+rule "rule 46" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "46") 
+	then 
+		list.add( "Rule 46" ); 
+end 
+rule "rule 47" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "47") 
+	then 
+		list.add( "Rule 47" ); 
+end 
+rule "rule 48" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "48") 
+	then 
+		list.add( "Rule 48" ); 
+end 
+rule "rule 49" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "49") 
+	then 
+		list.add( "Rule 49" ); 
+end 
+rule "rule 50" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "50") 
+	then 
+		list.add( "Rule 50" ); 
+end 
+rule "rule 51" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "51") 
+	then 
+		list.add( "Rule 51" ); 
+end 
+rule "rule 52" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "52") 
+	then 
+		list.add( "Rule 52" ); 
+end 
+rule "rule 53" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "53") 
+	then 
+		list.add( "Rule 53" ); 
+end 
+rule "rule 54" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "54") 
+	then 
+		list.add( "Rule 54" ); 
+end 
+rule "rule 55" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "55") 
+	then 
+		list.add( "Rule 55" ); 
+end 
+rule "rule 56" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "56") 
+	then 
+		list.add( "Rule 56" ); 
+end 
+rule "rule 57" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "57") 
+	then 
+		list.add( "Rule 57" ); 
+end 
+rule "rule 58" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "58") 
+	then 
+		list.add( "Rule 58" ); 
+end 
+rule "rule 59" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "59") 
+	then 
+		list.add( "Rule 59" ); 
+end 
+rule "rule 60" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "60") 
+	then 
+		list.add( "Rule 60" ); 
+end 
+rule "rule 61" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "61") 
+	then 
+		list.add( "Rule 61" ); 
+end 
+rule "rule 62" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "62") 
+	then 
+		list.add( "Rule 62" ); 
+end 
+rule "rule 63" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "63") 
+	then 
+		list.add( "Rule 63" ); 
+end 
+rule "rule 64" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "64") 
+	then 
+		list.add( "Rule 64" ); 
+end 
+rule "rule 65" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "65") 
+	then 
+		list.add( "Rule 65" ); 
+end 
+rule "rule 66" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "66") 
+	then 
+		list.add( "Rule 66" ); 
+end 
+rule "rule 67" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "67") 
+	then 
+		list.add( "Rule 67" ); 
+end 
+rule "rule 68" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "68") 
+	then 
+		list.add( "Rule 68" ); 
+end 
+rule "rule 69" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "69") 
+	then 
+		list.add( "Rule 69" ); 
+end 
+rule "rule 70" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "70") 
+	then 
+		list.add( "Rule 70" ); 
+end 
+rule "rule 71" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "71") 
+	then 
+		list.add( "Rule 71" ); 
+end 
+rule "rule 72" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "72") 
+	then 
+		list.add( "Rule 72" ); 
+end 
+rule "rule 73" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "73") 
+	then 
+		list.add( "Rule 73" ); 
+end 
+rule "rule 74" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "74") 
+	then 
+		list.add( "Rule 74" ); 
+end 
+rule "rule 75" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "75") 
+	then 
+		list.add( "Rule 75" ); 
+end 
+rule "rule 76" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "76") 
+	then 
+		list.add( "Rule 76" ); 
+end 
+rule "rule 77" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "77") 
+	then 
+		list.add( "Rule 77" ); 
+end 
+rule "rule 78" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "78") 
+	then 
+		list.add( "Rule 78" ); 
+end 
+rule "rule 79" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "79") 
+	then 
+		list.add( "Rule 79" ); 
+end 
+rule "rule 80" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "80") 
+	then 
+		list.add( "Rule 80" ); 
+end 
+rule "rule 81" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "81") 
+	then 
+		list.add( "Rule 81" ); 
+end 
+rule "rule 82" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "82") 
+	then 
+		list.add( "Rule 82" ); 
+end 
+rule "rule 83" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "83") 
+	then 
+		list.add( "Rule 83" ); 
+end 
+rule "rule 84" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "84") 
+	then 
+		list.add( "Rule 84" ); 
+end 
+rule "rule 85" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "85") 
+	then 
+		list.add( "Rule 85" ); 
+end 
+rule "rule 86" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "86") 
+	then 
+		list.add( "Rule 86" ); 
+end 
+rule "rule 87" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "87") 
+	then 
+		list.add( "Rule 87" ); 
+end 
+rule "rule 88" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "88") 
+	then 
+		list.add( "Rule 88" ); 
+end 
+rule "rule 89" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "89") 
+	then 
+		list.add( "Rule 89" ); 
+end 
+rule "rule 90" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "90") 
+	then 
+		list.add( "Rule 90" ); 
+end 
+rule "rule 91" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "91") 
+	then 
+		list.add( "Rule 91" ); 
+end 
+rule "rule 92" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "92") 
+	then 
+		list.add( "Rule 92" ); 
+end 
+rule "rule 93" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "93") 
+	then 
+		list.add( "Rule 93" ); 
+end 
+rule "rule 94" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "94") 
+	then 
+		list.add( "Rule 94" ); 
+end 
+rule "rule 95" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "95") 
+	then 
+		list.add( "Rule 95" ); 
+end 
+rule "rule 96" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "96") 
+	then 
+		list.add( "Rule 96" ); 
+end 
+rule "rule 97" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "97") 
+	then 
+		list.add( "Rule 97" ); 
+end 
+rule "rule 98" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "98") 
+	then 
+		list.add( "Rule 98" ); 
+end 
+rule "rule 99" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "99") 
+	then 
+		list.add( "Rule 99" ); 
+end 
+rule "rule 100" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "100") 
+	then 
+		list.add( "Rule 100" ); 
+end 
+rule "rule 101" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "101") 
+	then 
+		list.add( "Rule 101" ); 
+end 
+rule "rule 102" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "102") 
+	then 
+		list.add( "Rule 102" ); 
+end 
+rule "rule 103" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "103") 
+	then 
+		list.add( "Rule 103" ); 
+end 
+rule "rule 104" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "104") 
+	then 
+		list.add( "Rule 104" ); 
+end 
+rule "rule 105" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "105") 
+	then 
+		list.add( "Rule 105" ); 
+end 
+rule "rule 106" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "106") 
+	then 
+		list.add( "Rule 106" ); 
+end 
+rule "rule 107" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "107") 
+	then 
+		list.add( "Rule 107" ); 
+end 
+rule "rule 108" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "108") 
+	then 
+		list.add( "Rule 108" ); 
+end 
+rule "rule 109" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "109") 
+	then 
+		list.add( "Rule 109" ); 
+end 
+rule "rule 110" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "110") 
+	then 
+		list.add( "Rule 110" ); 
+end 
+rule "rule 111" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "111") 
+	then 
+		list.add( "Rule 111" ); 
+end 
+rule "rule 112" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "112") 
+	then 
+		list.add( "Rule 112" ); 
+end 
+rule "rule 113" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "113") 
+	then 
+		list.add( "Rule 113" ); 
+end 
+rule "rule 114" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "114") 
+	then 
+		list.add( "Rule 114" ); 
+end 
+rule "rule 115" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "115") 
+	then 
+		list.add( "Rule 115" ); 
+end 
+rule "rule 116" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "116") 
+	then 
+		list.add( "Rule 116" ); 
+end 
+rule "rule 117" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "117") 
+	then 
+		list.add( "Rule 117" ); 
+end 
+rule "rule 118" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "118") 
+	then 
+		list.add( "Rule 118" ); 
+end 
+rule "rule 119" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "119") 
+	then 
+		list.add( "Rule 119" ); 
+end 
+rule "rule 120" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "120") 
+	then 
+		list.add( "Rule 120" ); 
+end 
+rule "rule 121" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "121") 
+	then 
+		list.add( "Rule 121" ); 
+end 
+rule "rule 122" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "122") 
+	then 
+		list.add( "Rule 122" ); 
+end 
+rule "rule 123" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "123") 
+	then 
+		list.add( "Rule 123" ); 
+end 
+rule "rule 124" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "124") 
+	then 
+		list.add( "Rule 124" ); 
+end 
+rule "rule 125" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "125") 
+	then 
+		list.add( "Rule 125" ); 
+end 
+rule "rule 126" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "126") 
+	then 
+		list.add( "Rule 126" ); 
+end 
+rule "rule 127" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "127") 
+	then 
+		list.add( "Rule 127" ); 
+end 
+rule "rule 128" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "128") 
+	then 
+		list.add( "Rule 128" ); 
+end 
+rule "rule 129" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "129") 
+	then 
+		list.add( "Rule 129" ); 
+end 
+rule "rule 130" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "130") 
+	then 
+		list.add( "Rule 130" ); 
+end 
+rule "rule 131" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "131") 
+	then 
+		list.add( "Rule 131" ); 
+end 
+rule "rule 132" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "132") 
+	then 
+		list.add( "Rule 132" ); 
+end 
+rule "rule 133" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "133") 
+	then 
+		list.add( "Rule 133" ); 
+end 
+rule "rule 134" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "134") 
+	then 
+		list.add( "Rule 134" ); 
+end 
+rule "rule 135" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "135") 
+	then 
+		list.add( "Rule 135" ); 
+end 
+rule "rule 136" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "136") 
+	then 
+		list.add( "Rule 136" ); 
+end 
+rule "rule 137" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "137") 
+	then 
+		list.add( "Rule 137" ); 
+end 
+rule "rule 138" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "138") 
+	then 
+		list.add( "Rule 138" ); 
+end 
+rule "rule 139" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "139") 
+	then 
+		list.add( "Rule 139" ); 
+end 
+rule "rule 140" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "140") 
+	then 
+		list.add( "Rule 140" ); 
+end 
+rule "rule 141" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "141") 
+	then 
+		list.add( "Rule 141" ); 
+end 
+rule "rule 142" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "142") 
+	then 
+		list.add( "Rule 142" ); 
+end 
+rule "rule 143" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "143") 
+	then 
+		list.add( "Rule 143" ); 
+end 
+rule "rule 144" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "144") 
+	then 
+		list.add( "Rule 144" ); 
+end 
+rule "rule 145" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "145") 
+	then 
+		list.add( "Rule 145" ); 
+end 
+rule "rule 146" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "146") 
+	then 
+		list.add( "Rule 146" ); 
+end 
+rule "rule 147" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "147") 
+	then 
+		list.add( "Rule 147" ); 
+end 
+rule "rule 148" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "148") 
+	then 
+		list.add( "Rule 148" ); 
+end 
+rule "rule 149" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "149") 
+	then 
+		list.add( "Rule 149" ); 
+end 
+rule "rule 150" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "150") 
+	then 
+		list.add( "Rule 150" ); 
+end 
+rule "rule 151" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "151") 
+	then 
+		list.add( "Rule 151" ); 
+end 
+rule "rule 152" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "152") 
+	then 
+		list.add( "Rule 152" ); 
+end 
+rule "rule 153" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "153") 
+	then 
+		list.add( "Rule 153" ); 
+end 
+rule "rule 154" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "154") 
+	then 
+		list.add( "Rule 154" ); 
+end 
+rule "rule 155" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "155") 
+	then 
+		list.add( "Rule 155" ); 
+end 
+rule "rule 156" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "156") 
+	then 
+		list.add( "Rule 156" ); 
+end 
+rule "rule 157" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "157") 
+	then 
+		list.add( "Rule 157" ); 
+end 
+rule "rule 158" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "158") 
+	then 
+		list.add( "Rule 158" ); 
+end 
+rule "rule 159" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "159") 
+	then 
+		list.add( "Rule 159" ); 
+end 
+rule "rule 160" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "160") 
+	then 
+		list.add( "Rule 160" ); 
+end 
+rule "rule 161" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "161") 
+	then 
+		list.add( "Rule 161" ); 
+end 
+rule "rule 162" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "162") 
+	then 
+		list.add( "Rule 162" ); 
+end 
+rule "rule 163" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "163") 
+	then 
+		list.add( "Rule 163" ); 
+end 
+rule "rule 164" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "164") 
+	then 
+		list.add( "Rule 164" ); 
+end 
+rule "rule 165" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "165") 
+	then 
+		list.add( "Rule 165" ); 
+end 
+rule "rule 166" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "166") 
+	then 
+		list.add( "Rule 166" ); 
+end 
+rule "rule 167" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "167") 
+	then 
+		list.add( "Rule 167" ); 
+end 
+rule "rule 168" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "168") 
+	then 
+		list.add( "Rule 168" ); 
+end 
+rule "rule 169" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "169") 
+	then 
+		list.add( "Rule 169" ); 
+end 
+rule "rule 170" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "170") 
+	then 
+		list.add( "Rule 170" ); 
+end 
+rule "rule 171" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "171") 
+	then 
+		list.add( "Rule 171" ); 
+end 
+rule "rule 172" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "172") 
+	then 
+		list.add( "Rule 172" ); 
+end 
+rule "rule 173" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "173") 
+	then 
+		list.add( "Rule 173" ); 
+end 
+rule "rule 174" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "174") 
+	then 
+		list.add( "Rule 174" ); 
+end 
+rule "rule 175" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "175") 
+	then 
+		list.add( "Rule 175" ); 
+end 
+rule "rule 176" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "176") 
+	then 
+		list.add( "Rule 176" ); 
+end 
+rule "rule 177" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "177") 
+	then 
+		list.add( "Rule 177" ); 
+end 
+rule "rule 178" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "178") 
+	then 
+		list.add( "Rule 178" ); 
+end 
+rule "rule 179" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "179") 
+	then 
+		list.add( "Rule 179" ); 
+end 
+rule "rule 180" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "180") 
+	then 
+		list.add( "Rule 180" ); 
+end 
+rule "rule 181" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "181") 
+	then 
+		list.add( "Rule 181" ); 
+end 
+rule "rule 182" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "182") 
+	then 
+		list.add( "Rule 182" ); 
+end 
+rule "rule 183" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "183") 
+	then 
+		list.add( "Rule 183" ); 
+end 
+rule "rule 184" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "184") 
+	then 
+		list.add( "Rule 184" ); 
+end 
+rule "rule 185" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "185") 
+	then 
+		list.add( "Rule 185" ); 
+end 
+rule "rule 186" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "186") 
+	then 
+		list.add( "Rule 186" ); 
+end 
+rule "rule 187" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "187") 
+	then 
+		list.add( "Rule 187" ); 
+end 
+rule "rule 188" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "188") 
+	then 
+		list.add( "Rule 188" ); 
+end 
+rule "rule 189" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "189") 
+	then 
+		list.add( "Rule 189" ); 
+end 
+rule "rule 190" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "190") 
+	then 
+		list.add( "Rule 190" ); 
+end 
+rule "rule 191" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "191") 
+	then 
+		list.add( "Rule 191" ); 
+end 
+rule "rule 192" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "192") 
+	then 
+		list.add( "Rule 192" ); 
+end 
+rule "rule 193" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "193") 
+	then 
+		list.add( "Rule 193" ); 
+end 
+rule "rule 194" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "194") 
+	then 
+		list.add( "Rule 194" ); 
+end 
+rule "rule 195" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "195") 
+	then 
+		list.add( "Rule 195" ); 
+end 
+rule "rule 196" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "196") 
+	then 
+		list.add( "Rule 196" ); 
+end 
+rule "rule 197" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "197") 
+	then 
+		list.add( "Rule 197" ); 
+end 
+rule "rule 198" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "198") 
+	then 
+		list.add( "Rule 198" ); 
+end 
+rule "rule 199" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "199") 
+	then 
+		list.add( "Rule 199" ); 
+end 
+rule "rule 200" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "200") 
+	then 
+		list.add( "Rule 200" ); 
+end 
+rule "rule 201" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "201") 
+	then 
+		list.add( "Rule 201" ); 
+end 
+rule "rule 202" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "202") 
+	then 
+		list.add( "Rule 202" ); 
+end 
+rule "rule 203" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "203") 
+	then 
+		list.add( "Rule 203" ); 
+end 
+rule "rule 204" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "204") 
+	then 
+		list.add( "Rule 204" ); 
+end 
+rule "rule 205" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "205") 
+	then 
+		list.add( "Rule 205" ); 
+end 
+rule "rule 206" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "206") 
+	then 
+		list.add( "Rule 206" ); 
+end 
+rule "rule 207" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "207") 
+	then 
+		list.add( "Rule 207" ); 
+end 
+rule "rule 208" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "208") 
+	then 
+		list.add( "Rule 208" ); 
+end 
+rule "rule 209" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "209") 
+	then 
+		list.add( "Rule 209" ); 
+end 
+rule "rule 210" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "210") 
+	then 
+		list.add( "Rule 210" ); 
+end 
+rule "rule 211" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "211") 
+	then 
+		list.add( "Rule 211" ); 
+end 
+rule "rule 212" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "212") 
+	then 
+		list.add( "Rule 212" ); 
+end 
+rule "rule 213" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "213") 
+	then 
+		list.add( "Rule 213" ); 
+end 
+rule "rule 214" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "214") 
+	then 
+		list.add( "Rule 214" ); 
+end 
+rule "rule 215" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "215") 
+	then 
+		list.add( "Rule 215" ); 
+end 
+rule "rule 216" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "216") 
+	then 
+		list.add( "Rule 216" ); 
+end 
+rule "rule 217" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "217") 
+	then 
+		list.add( "Rule 217" ); 
+end 
+rule "rule 218" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "218") 
+	then 
+		list.add( "Rule 218" ); 
+end 
+rule "rule 219" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "219") 
+	then 
+		list.add( "Rule 219" ); 
+end 
+rule "rule 220" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "220") 
+	then 
+		list.add( "Rule 220" ); 
+end 
+rule "rule 221" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "221") 
+	then 
+		list.add( "Rule 221" ); 
+end 
+rule "rule 222" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "222") 
+	then 
+		list.add( "Rule 222" ); 
+end 
+rule "rule 223" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "223") 
+	then 
+		list.add( "Rule 223" ); 
+end 
+rule "rule 224" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "224") 
+	then 
+		list.add( "Rule 224" ); 
+end 
+rule "rule 225" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "225") 
+	then 
+		list.add( "Rule 225" ); 
+end 
+rule "rule 226" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "226") 
+	then 
+		list.add( "Rule 226" ); 
+end 
+rule "rule 227" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "227") 
+	then 
+		list.add( "Rule 227" ); 
+end 
+rule "rule 228" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "228") 
+	then 
+		list.add( "Rule 228" ); 
+end 
+rule "rule 229" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "229") 
+	then 
+		list.add( "Rule 229" ); 
+end 
+rule "rule 230" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "230") 
+	then 
+		list.add( "Rule 230" ); 
+end 
+rule "rule 231" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "231") 
+	then 
+		list.add( "Rule 231" ); 
+end 
+rule "rule 232" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "232") 
+	then 
+		list.add( "Rule 232" ); 
+end 
+rule "rule 233" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "233") 
+	then 
+		list.add( "Rule 233" ); 
+end 
+rule "rule 234" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "234") 
+	then 
+		list.add( "Rule 234" ); 
+end 
+rule "rule 235" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "235") 
+	then 
+		list.add( "Rule 235" ); 
+end 
+rule "rule 236" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "236") 
+	then 
+		list.add( "Rule 236" ); 
+end 
+rule "rule 237" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "237") 
+	then 
+		list.add( "Rule 237" ); 
+end 
+rule "rule 238" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "238") 
+	then 
+		list.add( "Rule 238" ); 
+end 
+rule "rule 239" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "239") 
+	then 
+		list.add( "Rule 239" ); 
+end 
+rule "rule 240" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "240") 
+	then 
+		list.add( "Rule 240" ); 
+end 
+rule "rule 241" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "241") 
+	then 
+		list.add( "Rule 241" ); 
+end 
+rule "rule 242" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "242") 
+	then 
+		list.add( "Rule 242" ); 
+end 
+rule "rule 243" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "243") 
+	then 
+		list.add( "Rule 243" ); 
+end 
+rule "rule 244" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "244") 
+	then 
+		list.add( "Rule 244" ); 
+end 
+rule "rule 245" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "245") 
+	then 
+		list.add( "Rule 245" ); 
+end 
+rule "rule 246" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "246") 
+	then 
+		list.add( "Rule 246" ); 
+end 
+rule "rule 247" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "247") 
+	then 
+		list.add( "Rule 247" ); 
+end 
+rule "rule 248" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "248") 
+	then 
+		list.add( "Rule 248" ); 
+end 
+rule "rule 249" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "249") 
+	then 
+		list.add( "Rule 249" ); 
+end 
+rule "rule 250" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "250") 
+	then 
+		list.add( "Rule 250" ); 
+end 
+rule "rule 251" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "251") 
+	then 
+		list.add( "Rule 251" ); 
+end 
+rule "rule 252" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "252") 
+	then 
+		list.add( "Rule 252" ); 
+end 
+rule "rule 253" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "253") 
+	then 
+		list.add( "Rule 253" ); 
+end 
+rule "rule 254" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "254") 
+	then 
+		list.add( "Rule 254" ); 
+end 
+rule "rule 255" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "255") 
+	then 
+		list.add( "Rule 255" ); 
+end 
+rule "rule 256" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "256") 
+	then 
+		list.add( "Rule 256" ); 
+end 
+rule "rule 257" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "257") 
+	then 
+		list.add( "Rule 257" ); 
+end 
+rule "rule 258" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "258") 
+	then 
+		list.add( "Rule 258" ); 
+end 
+rule "rule 259" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "259") 
+	then 
+		list.add( "Rule 259" ); 
+end 
+rule "rule 260" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "260") 
+	then 
+		list.add( "Rule 260" ); 
+end 
+rule "rule 261" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "261") 
+	then 
+		list.add( "Rule 261" ); 
+end 
+rule "rule 262" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "262") 
+	then 
+		list.add( "Rule 262" ); 
+end 
+rule "rule 263" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "263") 
+	then 
+		list.add( "Rule 263" ); 
+end 
+rule "rule 264" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "264") 
+	then 
+		list.add( "Rule 264" ); 
+end 
+rule "rule 265" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "265") 
+	then 
+		list.add( "Rule 265" ); 
+end 
+rule "rule 266" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "266") 
+	then 
+		list.add( "Rule 266" ); 
+end 
+rule "rule 267" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "267") 
+	then 
+		list.add( "Rule 267" ); 
+end 
+rule "rule 268" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "268") 
+	then 
+		list.add( "Rule 268" ); 
+end 
+rule "rule 269" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "269") 
+	then 
+		list.add( "Rule 269" ); 
+end 
+rule "rule 270" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "270") 
+	then 
+		list.add( "Rule 270" ); 
+end 
+rule "rule 271" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "271") 
+	then 
+		list.add( "Rule 271" ); 
+end 
+rule "rule 272" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "272") 
+	then 
+		list.add( "Rule 272" ); 
+end 
+rule "rule 273" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "273") 
+	then 
+		list.add( "Rule 273" ); 
+end 
+rule "rule 274" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "274") 
+	then 
+		list.add( "Rule 274" ); 
+end 
+rule "rule 275" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "275") 
+	then 
+		list.add( "Rule 275" ); 
+end 
+rule "rule 276" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "276") 
+	then 
+		list.add( "Rule 276" ); 
+end 
+rule "rule 277" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "277") 
+	then 
+		list.add( "Rule 277" ); 
+end 
+rule "rule 278" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "278") 
+	then 
+		list.add( "Rule 278" ); 
+end 
+rule "rule 279" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "279") 
+	then 
+		list.add( "Rule 279" ); 
+end 
+rule "rule 280" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "280") 
+	then 
+		list.add( "Rule 280" ); 
+end 
+rule "rule 281" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "281") 
+	then 
+		list.add( "Rule 281" ); 
+end 
+rule "rule 282" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "282") 
+	then 
+		list.add( "Rule 282" ); 
+end 
+rule "rule 283" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "283") 
+	then 
+		list.add( "Rule 283" ); 
+end 
+rule "rule 284" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "284") 
+	then 
+		list.add( "Rule 284" ); 
+end 
+rule "rule 285" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "285") 
+	then 
+		list.add( "Rule 285" ); 
+end 
+rule "rule 286" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "286") 
+	then 
+		list.add( "Rule 286" ); 
+end 
+rule "rule 287" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "287") 
+	then 
+		list.add( "Rule 287" ); 
+end 
+rule "rule 288" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "288") 
+	then 
+		list.add( "Rule 288" ); 
+end 
+rule "rule 289" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "289") 
+	then 
+		list.add( "Rule 289" ); 
+end 
+rule "rule 290" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "290") 
+	then 
+		list.add( "Rule 290" ); 
+end 
+rule "rule 291" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "291") 
+	then 
+		list.add( "Rule 291" ); 
+end 
+rule "rule 292" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "292") 
+	then 
+		list.add( "Rule 292" ); 
+end 
+rule "rule 293" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "293") 
+	then 
+		list.add( "Rule 293" ); 
+end 
+rule "rule 294" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "294") 
+	then 
+		list.add( "Rule 294" ); 
+end 
+rule "rule 295" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "295") 
+	then 
+		list.add( "Rule 295" ); 
+end 
+rule "rule 296" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "296") 
+	then 
+		list.add( "Rule 296" ); 
+end 
+rule "rule 297" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "297") 
+	then 
+		list.add( "Rule 297" ); 
+end 
+rule "rule 298" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "298") 
+	then 
+		list.add( "Rule 298" ); 
+end 
+rule "rule 299" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "299") 
+	then 
+		list.add( "Rule 299" ); 
+end 
+rule "rule 300" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "300") 
+	then 
+		list.add( "Rule 300" ); 
+end 
+rule "rule 301" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "301") 
+	then 
+		list.add( "Rule 301" ); 
+end 
+rule "rule 302" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "302") 
+	then 
+		list.add( "Rule 302" ); 
+end 
+rule "rule 303" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "303") 
+	then 
+		list.add( "Rule 303" ); 
+end 
+rule "rule 304" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "304") 
+	then 
+		list.add( "Rule 304" ); 
+end 
+rule "rule 305" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "305") 
+	then 
+		list.add( "Rule 305" ); 
+end 
+rule "rule 306" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "306") 
+	then 
+		list.add( "Rule 306" ); 
+end 
+rule "rule 307" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "307") 
+	then 
+		list.add( "Rule 307" ); 
+end 
+rule "rule 308" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "308") 
+	then 
+		list.add( "Rule 308" ); 
+end 
+rule "rule 309" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "309") 
+	then 
+		list.add( "Rule 309" ); 
+end 
+rule "rule 310" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "310") 
+	then 
+		list.add( "Rule 310" ); 
+end 
+rule "rule 311" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "311") 
+	then 
+		list.add( "Rule 311" ); 
+end 
+rule "rule 312" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "312") 
+	then 
+		list.add( "Rule 312" ); 
+end 
+rule "rule 313" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "313") 
+	then 
+		list.add( "Rule 313" ); 
+end 
+rule "rule 314" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "314") 
+	then 
+		list.add( "Rule 314" ); 
+end 
+rule "rule 315" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "315") 
+	then 
+		list.add( "Rule 315" ); 
+end 
+rule "rule 316" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "316") 
+	then 
+		list.add( "Rule 316" ); 
+end 
+rule "rule 317" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "317") 
+	then 
+		list.add( "Rule 317" ); 
+end 
+rule "rule 318" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "318") 
+	then 
+		list.add( "Rule 318" ); 
+end 
+rule "rule 319" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "319") 
+	then 
+		list.add( "Rule 319" ); 
+end 
+rule "rule 320" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "320") 
+	then 
+		list.add( "Rule 320" ); 
+end 
+rule "rule 321" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "321") 
+	then 
+		list.add( "Rule 321" ); 
+end 
+rule "rule 322" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "322") 
+	then 
+		list.add( "Rule 322" ); 
+end 
+rule "rule 323" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "323") 
+	then 
+		list.add( "Rule 323" ); 
+end 
+rule "rule 324" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "324") 
+	then 
+		list.add( "Rule 324" ); 
+end 
+rule "rule 325" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "325") 
+	then 
+		list.add( "Rule 325" ); 
+end 
+rule "rule 326" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "326") 
+	then 
+		list.add( "Rule 326" ); 
+end 
+rule "rule 327" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "327") 
+	then 
+		list.add( "Rule 327" ); 
+end 
+rule "rule 328" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "328") 
+	then 
+		list.add( "Rule 328" ); 
+end 
+rule "rule 329" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "329") 
+	then 
+		list.add( "Rule 329" ); 
+end 
+rule "rule 330" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "330") 
+	then 
+		list.add( "Rule 330" ); 
+end 
+rule "rule 331" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "331") 
+	then 
+		list.add( "Rule 331" ); 
+end 
+rule "rule 332" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "332") 
+	then 
+		list.add( "Rule 332" ); 
+end 
+rule "rule 333" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "333") 
+	then 
+		list.add( "Rule 333" ); 
+end 
+rule "rule 334" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "334") 
+	then 
+		list.add( "Rule 334" ); 
+end 
+rule "rule 335" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "335") 
+	then 
+		list.add( "Rule 335" ); 
+end 
+rule "rule 336" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "336") 
+	then 
+		list.add( "Rule 336" ); 
+end 
+rule "rule 337" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "337") 
+	then 
+		list.add( "Rule 337" ); 
+end 
+rule "rule 338" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "338") 
+	then 
+		list.add( "Rule 338" ); 
+end 
+rule "rule 339" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "339") 
+	then 
+		list.add( "Rule 339" ); 
+end 
+rule "rule 340" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "340") 
+	then 
+		list.add( "Rule 340" ); 
+end 
+rule "rule 341" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "341") 
+	then 
+		list.add( "Rule 341" ); 
+end 
+rule "rule 342" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "342") 
+	then 
+		list.add( "Rule 342" ); 
+end 
+rule "rule 343" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "343") 
+	then 
+		list.add( "Rule 343" ); 
+end 
+rule "rule 344" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "344") 
+	then 
+		list.add( "Rule 344" ); 
+end 
+rule "rule 345" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "345") 
+	then 
+		list.add( "Rule 345" ); 
+end 
+rule "rule 346" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "346") 
+	then 
+		list.add( "Rule 346" ); 
+end 
+rule "rule 347" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "347") 
+	then 
+		list.add( "Rule 347" ); 
+end 
+rule "rule 348" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "348") 
+	then 
+		list.add( "Rule 348" ); 
+end 
+rule "rule 349" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "349") 
+	then 
+		list.add( "Rule 349" ); 
+end 
+rule "rule 350" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "350") 
+	then 
+		list.add( "Rule 350" ); 
+end 
+rule "rule 351" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "351") 
+	then 
+		list.add( "Rule 351" ); 
+end 
+rule "rule 352" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "352") 
+	then 
+		list.add( "Rule 352" ); 
+end 
+rule "rule 353" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "353") 
+	then 
+		list.add( "Rule 353" ); 
+end 
+rule "rule 354" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "354") 
+	then 
+		list.add( "Rule 354" ); 
+end 
+rule "rule 355" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "355") 
+	then 
+		list.add( "Rule 355" ); 
+end 
+rule "rule 356" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "356") 
+	then 
+		list.add( "Rule 356" ); 
+end 
+rule "rule 357" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "357") 
+	then 
+		list.add( "Rule 357" ); 
+end 
+rule "rule 358" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "358") 
+	then 
+		list.add( "Rule 358" ); 
+end 
+rule "rule 359" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "359") 
+	then 
+		list.add( "Rule 359" ); 
+end 
+rule "rule 360" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "360") 
+	then 
+		list.add( "Rule 360" ); 
+end 
+rule "rule 361" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "361") 
+	then 
+		list.add( "Rule 361" ); 
+end 
+rule "rule 362" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "362") 
+	then 
+		list.add( "Rule 362" ); 
+end 
+rule "rule 363" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "363") 
+	then 
+		list.add( "Rule 363" ); 
+end 
+rule "rule 364" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "364") 
+	then 
+		list.add( "Rule 364" ); 
+end 
+rule "rule 365" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "365") 
+	then 
+		list.add( "Rule 365" ); 
+end 
+rule "rule 366" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "366") 
+	then 
+		list.add( "Rule 366" ); 
+end 
+rule "rule 367" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "367") 
+	then 
+		list.add( "Rule 367" ); 
+end 
+rule "rule 368" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "368") 
+	then 
+		list.add( "Rule 368" ); 
+end 
+rule "rule 369" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "369") 
+	then 
+		list.add( "Rule 369" ); 
+end 
+rule "rule 370" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "370") 
+	then 
+		list.add( "Rule 370" ); 
+end 
+rule "rule 371" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "371") 
+	then 
+		list.add( "Rule 371" ); 
+end 
+rule "rule 372" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "372") 
+	then 
+		list.add( "Rule 372" ); 
+end 
+rule "rule 373" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "373") 
+	then 
+		list.add( "Rule 373" ); 
+end 
+rule "rule 374" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "374") 
+	then 
+		list.add( "Rule 374" ); 
+end 
+rule "rule 375" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "375") 
+	then 
+		list.add( "Rule 375" ); 
+end 
+rule "rule 376" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "376") 
+	then 
+		list.add( "Rule 376" ); 
+end 
+rule "rule 377" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "377") 
+	then 
+		list.add( "Rule 377" ); 
+end 
+rule "rule 378" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "378") 
+	then 
+		list.add( "Rule 378" ); 
+end 
+rule "rule 379" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "379") 
+	then 
+		list.add( "Rule 379" ); 
+end 
+rule "rule 380" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "380") 
+	then 
+		list.add( "Rule 380" ); 
+end 
+rule "rule 381" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "381") 
+	then 
+		list.add( "Rule 381" ); 
+end 
+rule "rule 382" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "382") 
+	then 
+		list.add( "Rule 382" ); 
+end 
+rule "rule 383" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "383") 
+	then 
+		list.add( "Rule 383" ); 
+end 
+rule "rule 384" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "384") 
+	then 
+		list.add( "Rule 384" ); 
+end 
+rule "rule 385" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "385") 
+	then 
+		list.add( "Rule 385" ); 
+end 
+rule "rule 386" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "386") 
+	then 
+		list.add( "Rule 386" ); 
+end 
+rule "rule 387" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "387") 
+	then 
+		list.add( "Rule 387" ); 
+end 
+rule "rule 388" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "388") 
+	then 
+		list.add( "Rule 388" ); 
+end 
+rule "rule 389" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "389") 
+	then 
+		list.add( "Rule 389" ); 
+end 
+rule "rule 390" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "390") 
+	then 
+		list.add( "Rule 390" ); 
+end 
+rule "rule 391" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "391") 
+	then 
+		list.add( "Rule 391" ); 
+end 
+rule "rule 392" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "392") 
+	then 
+		list.add( "Rule 392" ); 
+end 
+rule "rule 393" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "393") 
+	then 
+		list.add( "Rule 393" ); 
+end 
+rule "rule 394" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "394") 
+	then 
+		list.add( "Rule 394" ); 
+end 
+rule "rule 395" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "395") 
+	then 
+		list.add( "Rule 395" ); 
+end 
+rule "rule 396" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "396") 
+	then 
+		list.add( "Rule 396" ); 
+end 
+rule "rule 397" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "397") 
+	then 
+		list.add( "Rule 397" ); 
+end 
+rule "rule 398" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "398") 
+	then 
+		list.add( "Rule 398" ); 
+end 
+rule "rule 399" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "399") 
+	then 
+		list.add( "Rule 399" ); 
+end 
+rule "rule 400" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "400") 
+	then 
+		list.add( "Rule 400" ); 
+end 
+rule "rule 401" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "401") 
+	then 
+		list.add( "Rule 401" ); 
+end 
+rule "rule 402" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "402") 
+	then 
+		list.add( "Rule 402" ); 
+end 
+rule "rule 403" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "403") 
+	then 
+		list.add( "Rule 403" ); 
+end 
+rule "rule 404" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "404") 
+	then 
+		list.add( "Rule 404" ); 
+end 
+rule "rule 405" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "405") 
+	then 
+		list.add( "Rule 405" ); 
+end 
+rule "rule 406" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "406") 
+	then 
+		list.add( "Rule 406" ); 
+end 
+rule "rule 407" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "407") 
+	then 
+		list.add( "Rule 407" ); 
+end 
+rule "rule 408" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "408") 
+	then 
+		list.add( "Rule 408" ); 
+end 
+rule "rule 409" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "409") 
+	then 
+		list.add( "Rule 409" ); 
+end 
+rule "rule 410" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "410") 
+	then 
+		list.add( "Rule 410" ); 
+end 
+rule "rule 411" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "411") 
+	then 
+		list.add( "Rule 411" ); 
+end 
+rule "rule 412" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "412") 
+	then 
+		list.add( "Rule 412" ); 
+end 
+rule "rule 413" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "413") 
+	then 
+		list.add( "Rule 413" ); 
+end 
+rule "rule 414" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "414") 
+	then 
+		list.add( "Rule 414" ); 
+end 
+rule "rule 415" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "415") 
+	then 
+		list.add( "Rule 415" ); 
+end 
+rule "rule 416" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "416") 
+	then 
+		list.add( "Rule 416" ); 
+end 
+rule "rule 417" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "417") 
+	then 
+		list.add( "Rule 417" ); 
+end 
+rule "rule 418" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "418") 
+	then 
+		list.add( "Rule 418" ); 
+end 
+rule "rule 419" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "419") 
+	then 
+		list.add( "Rule 419" ); 
+end 
+rule "rule 420" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "420") 
+	then 
+		list.add( "Rule 420" ); 
+end 
+rule "rule 421" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "421") 
+	then 
+		list.add( "Rule 421" ); 
+end 
+rule "rule 422" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "422") 
+	then 
+		list.add( "Rule 422" ); 
+end 
+rule "rule 423" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "423") 
+	then 
+		list.add( "Rule 423" ); 
+end 
+rule "rule 424" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "424") 
+	then 
+		list.add( "Rule 424" ); 
+end 
+rule "rule 425" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "425") 
+	then 
+		list.add( "Rule 425" ); 
+end 
+rule "rule 426" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "426") 
+	then 
+		list.add( "Rule 426" ); 
+end 
+rule "rule 427" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "427") 
+	then 
+		list.add( "Rule 427" ); 
+end 
+rule "rule 428" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "428") 
+	then 
+		list.add( "Rule 428" ); 
+end 
+rule "rule 429" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "429") 
+	then 
+		list.add( "Rule 429" ); 
+end 
+rule "rule 430" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "430") 
+	then 
+		list.add( "Rule 430" ); 
+end 
+rule "rule 431" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "431") 
+	then 
+		list.add( "Rule 431" ); 
+end 
+rule "rule 432" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "432") 
+	then 
+		list.add( "Rule 432" ); 
+end 
+rule "rule 433" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "433") 
+	then 
+		list.add( "Rule 433" ); 
+end 
+rule "rule 434" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "434") 
+	then 
+		list.add( "Rule 434" ); 
+end 
+rule "rule 435" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "435") 
+	then 
+		list.add( "Rule 435" ); 
+end 
+rule "rule 436" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "436") 
+	then 
+		list.add( "Rule 436" ); 
+end 
+rule "rule 437" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "437") 
+	then 
+		list.add( "Rule 437" ); 
+end 
+rule "rule 438" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "438") 
+	then 
+		list.add( "Rule 438" ); 
+end 
+rule "rule 439" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "439") 
+	then 
+		list.add( "Rule 439" ); 
+end 
+rule "rule 440" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "440") 
+	then 
+		list.add( "Rule 440" ); 
+end 
+rule "rule 441" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "441") 
+	then 
+		list.add( "Rule 441" ); 
+end 
+rule "rule 442" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "442") 
+	then 
+		list.add( "Rule 442" ); 
+end 
+rule "rule 443" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "443") 
+	then 
+		list.add( "Rule 443" ); 
+end 
+rule "rule 444" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "444") 
+	then 
+		list.add( "Rule 444" ); 
+end 
+rule "rule 445" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "445") 
+	then 
+		list.add( "Rule 445" ); 
+end 
+rule "rule 446" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "446") 
+	then 
+		list.add( "Rule 446" ); 
+end 
+rule "rule 447" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "447") 
+	then 
+		list.add( "Rule 447" ); 
+end 
+rule "rule 448" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "448") 
+	then 
+		list.add( "Rule 448" ); 
+end 
+rule "rule 449" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "449") 
+	then 
+		list.add( "Rule 449" ); 
+end 
+rule "rule 450" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "450") 
+	then 
+		list.add( "Rule 450" ); 
+end 
+rule "rule 451" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "451") 
+	then 
+		list.add( "Rule 451" ); 
+end 
+rule "rule 452" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "452") 
+	then 
+		list.add( "Rule 452" ); 
+end 
+rule "rule 453" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "453") 
+	then 
+		list.add( "Rule 453" ); 
+end 
+rule "rule 454" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "454") 
+	then 
+		list.add( "Rule 454" ); 
+end 
+rule "rule 455" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "455") 
+	then 
+		list.add( "Rule 455" ); 
+end 
+rule "rule 456" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "456") 
+	then 
+		list.add( "Rule 456" ); 
+end 
+rule "rule 457" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "457") 
+	then 
+		list.add( "Rule 457" ); 
+end 
+rule "rule 458" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "458") 
+	then 
+		list.add( "Rule 458" ); 
+end 
+rule "rule 459" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "459") 
+	then 
+		list.add( "Rule 459" ); 
+end 
+rule "rule 460" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "460") 
+	then 
+		list.add( "Rule 460" ); 
+end 
+rule "rule 461" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "461") 
+	then 
+		list.add( "Rule 461" ); 
+end 
+rule "rule 462" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "462") 
+	then 
+		list.add( "Rule 462" ); 
+end 
+rule "rule 463" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "463") 
+	then 
+		list.add( "Rule 463" ); 
+end 
+rule "rule 464" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "464") 
+	then 
+		list.add( "Rule 464" ); 
+end 
+rule "rule 465" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "465") 
+	then 
+		list.add( "Rule 465" ); 
+end 
+rule "rule 466" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "466") 
+	then 
+		list.add( "Rule 466" ); 
+end 
+rule "rule 467" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "467") 
+	then 
+		list.add( "Rule 467" ); 
+end 
+rule "rule 468" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "468") 
+	then 
+		list.add( "Rule 468" ); 
+end 
+rule "rule 469" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "469") 
+	then 
+		list.add( "Rule 469" ); 
+end 
+rule "rule 470" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "470") 
+	then 
+		list.add( "Rule 470" ); 
+end 
+rule "rule 471" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "471") 
+	then 
+		list.add( "Rule 471" ); 
+end 
+rule "rule 472" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "472") 
+	then 
+		list.add( "Rule 472" ); 
+end 
+rule "rule 473" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "473") 
+	then 
+		list.add( "Rule 473" ); 
+end 
+rule "rule 474" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "474") 
+	then 
+		list.add( "Rule 474" ); 
+end 
+rule "rule 475" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "475") 
+	then 
+		list.add( "Rule 475" ); 
+end 
+rule "rule 476" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "476") 
+	then 
+		list.add( "Rule 476" ); 
+end 
+rule "rule 477" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "477") 
+	then 
+		list.add( "Rule 477" ); 
+end 
+rule "rule 478" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "478") 
+	then 
+		list.add( "Rule 478" ); 
+end 
+rule "rule 479" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "479") 
+	then 
+		list.add( "Rule 479" ); 
+end 
+rule "rule 480" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "480") 
+	then 
+		list.add( "Rule 480" ); 
+end 
+rule "rule 481" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "481") 
+	then 
+		list.add( "Rule 481" ); 
+end 
+rule "rule 482" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "482") 
+	then 
+		list.add( "Rule 482" ); 
+end 
+rule "rule 483" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "483") 
+	then 
+		list.add( "Rule 483" ); 
+end 
+rule "rule 484" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "484") 
+	then 
+		list.add( "Rule 484" ); 
+end 
+rule "rule 485" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "485") 
+	then 
+		list.add( "Rule 485" ); 
+end 
+rule "rule 486" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "486") 
+	then 
+		list.add( "Rule 486" ); 
+end 
+rule "rule 487" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "487") 
+	then 
+		list.add( "Rule 487" ); 
+end 
+rule "rule 488" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "488") 
+	then 
+		list.add( "Rule 488" ); 
+end 
+rule "rule 489" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "489") 
+	then 
+		list.add( "Rule 489" ); 
+end 
+rule "rule 490" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "490") 
+	then 
+		list.add( "Rule 490" ); 
+end 
+rule "rule 491" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "491") 
+	then 
+		list.add( "Rule 491" ); 
+end 
+rule "rule 492" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "492") 
+	then 
+		list.add( "Rule 492" ); 
+end 
+rule "rule 493" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "493") 
+	then 
+		list.add( "Rule 493" ); 
+end 
+rule "rule 494" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "494") 
+	then 
+		list.add( "Rule 494" ); 
+end 
+rule "rule 495" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "495") 
+	then 
+		list.add( "Rule 495" ); 
+end 
+rule "rule 496" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "496") 
+	then 
+		list.add( "Rule 496" ); 
+end 
+rule "rule 497" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "497") 
+	then 
+		list.add( "Rule 497" ); 
+end 
+rule "rule 498" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "498") 
+	then 
+		list.add( "Rule 498" ); 
+end 
+rule "rule 499" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "499") 
+	then 
+		list.add( "Rule 499" ); 
+end 
+rule "rule 500" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "500") 
+	then 
+		list.add( "Rule 500" ); 
+end 
+rule "rule 501" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "501") 
+	then 
+		list.add( "Rule 501" ); 
+end 
+rule "rule 502" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "502") 
+	then 
+		list.add( "Rule 502" ); 
+end 
+rule "rule 503" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "503") 
+	then 
+		list.add( "Rule 503" ); 
+end 
+rule "rule 504" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "504") 
+	then 
+		list.add( "Rule 504" ); 
+end 
+rule "rule 505" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "505") 
+	then 
+		list.add( "Rule 505" ); 
+end 
+rule "rule 506" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "506") 
+	then 
+		list.add( "Rule 506" ); 
+end 
+rule "rule 507" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "507") 
+	then 
+		list.add( "Rule 507" ); 
+end 
+rule "rule 508" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "508") 
+	then 
+		list.add( "Rule 508" ); 
+end 
+rule "rule 509" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "509") 
+	then 
+		list.add( "Rule 509" ); 
+end 
+rule "rule 510" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "510") 
+	then 
+		list.add( "Rule 510" ); 
+end 
+rule "rule 511" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "511") 
+	then 
+		list.add( "Rule 511" ); 
+end 
+rule "rule 512" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "512") 
+	then 
+		list.add( "Rule 512" ); 
+end 
+rule "rule 513" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "513") 
+	then 
+		list.add( "Rule 513" ); 
+end 
+rule "rule 514" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "514") 
+	then 
+		list.add( "Rule 514" ); 
+end 
+rule "rule 515" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "515") 
+	then 
+		list.add( "Rule 515" ); 
+end 
+rule "rule 516" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "516") 
+	then 
+		list.add( "Rule 516" ); 
+end 
+rule "rule 517" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "517") 
+	then 
+		list.add( "Rule 517" ); 
+end 
+rule "rule 518" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "518") 
+	then 
+		list.add( "Rule 518" ); 
+end 
+rule "rule 519" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "519") 
+	then 
+		list.add( "Rule 519" ); 
+end 
+rule "rule 520" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "520") 
+	then 
+		list.add( "Rule 520" ); 
+end 
+rule "rule 521" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "521") 
+	then 
+		list.add( "Rule 521" ); 
+end 
+rule "rule 522" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "522") 
+	then 
+		list.add( "Rule 522" ); 
+end 
+rule "rule 523" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "523") 
+	then 
+		list.add( "Rule 523" ); 
+end 
+rule "rule 524" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "524") 
+	then 
+		list.add( "Rule 524" ); 
+end 
+rule "rule 525" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "525") 
+	then 
+		list.add( "Rule 525" ); 
+end 
+rule "rule 526" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "526") 
+	then 
+		list.add( "Rule 526" ); 
+end 
+rule "rule 527" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "527") 
+	then 
+		list.add( "Rule 527" ); 
+end 
+rule "rule 528" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "528") 
+	then 
+		list.add( "Rule 528" ); 
+end 
+rule "rule 529" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "529") 
+	then 
+		list.add( "Rule 529" ); 
+end 
+rule "rule 530" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "530") 
+	then 
+		list.add( "Rule 530" ); 
+end 
+rule "rule 531" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "531") 
+	then 
+		list.add( "Rule 531" ); 
+end 
+rule "rule 532" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "532") 
+	then 
+		list.add( "Rule 532" ); 
+end 
+rule "rule 533" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "533") 
+	then 
+		list.add( "Rule 533" ); 
+end 
+rule "rule 534" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "534") 
+	then 
+		list.add( "Rule 534" ); 
+end 
+rule "rule 535" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "535") 
+	then 
+		list.add( "Rule 535" ); 
+end 
+rule "rule 536" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "536") 
+	then 
+		list.add( "Rule 536" ); 
+end 
+rule "rule 537" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "537") 
+	then 
+		list.add( "Rule 537" ); 
+end 
+rule "rule 538" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "538") 
+	then 
+		list.add( "Rule 538" ); 
+end 
+rule "rule 539" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "539") 
+	then 
+		list.add( "Rule 539" ); 
+end 
+rule "rule 540" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "540") 
+	then 
+		list.add( "Rule 540" ); 
+end 
+rule "rule 541" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "541") 
+	then 
+		list.add( "Rule 541" ); 
+end 
+rule "rule 542" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "542") 
+	then 
+		list.add( "Rule 542" ); 
+end 
+rule "rule 543" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "543") 
+	then 
+		list.add( "Rule 543" ); 
+end 
+rule "rule 544" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "544") 
+	then 
+		list.add( "Rule 544" ); 
+end 
+rule "rule 545" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "545") 
+	then 
+		list.add( "Rule 545" ); 
+end 
+rule "rule 546" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "546") 
+	then 
+		list.add( "Rule 546" ); 
+end 
+rule "rule 547" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "547") 
+	then 
+		list.add( "Rule 547" ); 
+end 
+rule "rule 548" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "548") 
+	then 
+		list.add( "Rule 548" ); 
+end 
+rule "rule 549" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "549") 
+	then 
+		list.add( "Rule 549" ); 
+end 
+rule "rule 550" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "550") 
+	then 
+		list.add( "Rule 550" ); 
+end 
+rule "rule 551" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "551") 
+	then 
+		list.add( "Rule 551" ); 
+end 
+rule "rule 552" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "552") 
+	then 
+		list.add( "Rule 552" ); 
+end 
+rule "rule 553" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "553") 
+	then 
+		list.add( "Rule 553" ); 
+end 
+rule "rule 554" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "554") 
+	then 
+		list.add( "Rule 554" ); 
+end 
+rule "rule 555" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "555") 
+	then 
+		list.add( "Rule 555" ); 
+end 
+rule "rule 556" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "556") 
+	then 
+		list.add( "Rule 556" ); 
+end 
+rule "rule 557" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "557") 
+	then 
+		list.add( "Rule 557" ); 
+end 
+rule "rule 558" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "558") 
+	then 
+		list.add( "Rule 558" ); 
+end 
+rule "rule 559" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "559") 
+	then 
+		list.add( "Rule 559" ); 
+end 
+rule "rule 560" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "560") 
+	then 
+		list.add( "Rule 560" ); 
+end 
+rule "rule 561" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "561") 
+	then 
+		list.add( "Rule 561" ); 
+end 
+rule "rule 562" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "562") 
+	then 
+		list.add( "Rule 562" ); 
+end 
+rule "rule 563" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "563") 
+	then 
+		list.add( "Rule 563" ); 
+end 
+rule "rule 564" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "564") 
+	then 
+		list.add( "Rule 564" ); 
+end 
+rule "rule 565" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "565") 
+	then 
+		list.add( "Rule 565" ); 
+end 
+rule "rule 566" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "566") 
+	then 
+		list.add( "Rule 566" ); 
+end 
+rule "rule 567" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "567") 
+	then 
+		list.add( "Rule 567" ); 
+end 
+rule "rule 568" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "568") 
+	then 
+		list.add( "Rule 568" ); 
+end 
+rule "rule 569" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "569") 
+	then 
+		list.add( "Rule 569" ); 
+end 
+rule "rule 570" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "570") 
+	then 
+		list.add( "Rule 570" ); 
+end 
+rule "rule 571" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "571") 
+	then 
+		list.add( "Rule 571" ); 
+end 
+rule "rule 572" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "572") 
+	then 
+		list.add( "Rule 572" ); 
+end 
+rule "rule 573" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "573") 
+	then 
+		list.add( "Rule 573" ); 
+end 
+rule "rule 574" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "574") 
+	then 
+		list.add( "Rule 574" ); 
+end 
+rule "rule 575" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "575") 
+	then 
+		list.add( "Rule 575" ); 
+end 
+rule "rule 576" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "576") 
+	then 
+		list.add( "Rule 576" ); 
+end 
+rule "rule 577" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "577") 
+	then 
+		list.add( "Rule 577" ); 
+end 
+rule "rule 578" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "578") 
+	then 
+		list.add( "Rule 578" ); 
+end 
+rule "rule 579" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "579") 
+	then 
+		list.add( "Rule 579" ); 
+end 
+rule "rule 580" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "580") 
+	then 
+		list.add( "Rule 580" ); 
+end 
+rule "rule 581" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "581") 
+	then 
+		list.add( "Rule 581" ); 
+end 
+rule "rule 582" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "582") 
+	then 
+		list.add( "Rule 582" ); 
+end 
+rule "rule 583" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "583") 
+	then 
+		list.add( "Rule 583" ); 
+end 
+rule "rule 584" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "584") 
+	then 
+		list.add( "Rule 584" ); 
+end 
+rule "rule 585" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "585") 
+	then 
+		list.add( "Rule 585" ); 
+end 
+rule "rule 586" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "586") 
+	then 
+		list.add( "Rule 586" ); 
+end 
+rule "rule 587" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "587") 
+	then 
+		list.add( "Rule 587" ); 
+end 
+rule "rule 588" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "588") 
+	then 
+		list.add( "Rule 588" ); 
+end 
+rule "rule 589" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "589") 
+	then 
+		list.add( "Rule 589" ); 
+end 
+rule "rule 590" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "590") 
+	then 
+		list.add( "Rule 590" ); 
+end 
+rule "rule 591" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "591") 
+	then 
+		list.add( "Rule 591" ); 
+end 
+rule "rule 592" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "592") 
+	then 
+		list.add( "Rule 592" ); 
+end 
+rule "rule 593" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "593") 
+	then 
+		list.add( "Rule 593" ); 
+end 
+rule "rule 594" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "594") 
+	then 
+		list.add( "Rule 594" ); 
+end 
+rule "rule 595" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "595") 
+	then 
+		list.add( "Rule 595" ); 
+end 
+rule "rule 596" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "596") 
+	then 
+		list.add( "Rule 596" ); 
+end 
+rule "rule 597" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "597") 
+	then 
+		list.add( "Rule 597" ); 
+end 
+rule "rule 598" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "598") 
+	then 
+		list.add( "Rule 598" ); 
+end 
+rule "rule 599" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "599") 
+	then 
+		list.add( "Rule 599" ); 
+end 
+rule "rule 600" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "600") 
+	then 
+		list.add( "Rule 600" ); 
+end 
+rule "rule 601" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "601") 
+	then 
+		list.add( "Rule 601" ); 
+end 
+rule "rule 602" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "602") 
+	then 
+		list.add( "Rule 602" ); 
+end 
+rule "rule 603" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "603") 
+	then 
+		list.add( "Rule 603" ); 
+end 
+rule "rule 604" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "604") 
+	then 
+		list.add( "Rule 604" ); 
+end 
+rule "rule 605" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "605") 
+	then 
+		list.add( "Rule 605" ); 
+end 
+rule "rule 606" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "606") 
+	then 
+		list.add( "Rule 606" ); 
+end 
+rule "rule 607" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "607") 
+	then 
+		list.add( "Rule 607" ); 
+end 
+rule "rule 608" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "608") 
+	then 
+		list.add( "Rule 608" ); 
+end 
+rule "rule 609" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "609") 
+	then 
+		list.add( "Rule 609" ); 
+end 
+rule "rule 610" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "610") 
+	then 
+		list.add( "Rule 610" ); 
+end 
+rule "rule 611" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "611") 
+	then 
+		list.add( "Rule 611" ); 
+end 
+rule "rule 612" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "612") 
+	then 
+		list.add( "Rule 612" ); 
+end 
+rule "rule 613" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "613") 
+	then 
+		list.add( "Rule 613" ); 
+end 
+rule "rule 614" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "614") 
+	then 
+		list.add( "Rule 614" ); 
+end 
+rule "rule 615" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "615") 
+	then 
+		list.add( "Rule 615" ); 
+end 
+rule "rule 616" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "616") 
+	then 
+		list.add( "Rule 616" ); 
+end 
+rule "rule 617" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "617") 
+	then 
+		list.add( "Rule 617" ); 
+end 
+rule "rule 618" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "618") 
+	then 
+		list.add( "Rule 618" ); 
+end 
+rule "rule 619" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "619") 
+	then 
+		list.add( "Rule 619" ); 
+end 
+rule "rule 620" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "620") 
+	then 
+		list.add( "Rule 620" ); 
+end 
+rule "rule 621" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "621") 
+	then 
+		list.add( "Rule 621" ); 
+end 
+rule "rule 622" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "622") 
+	then 
+		list.add( "Rule 622" ); 
+end 
+rule "rule 623" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "623") 
+	then 
+		list.add( "Rule 623" ); 
+end 
+rule "rule 624" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "624") 
+	then 
+		list.add( "Rule 624" ); 
+end 
+rule "rule 625" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "625") 
+	then 
+		list.add( "Rule 625" ); 
+end 
+rule "rule 626" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "626") 
+	then 
+		list.add( "Rule 626" ); 
+end 
+rule "rule 627" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "627") 
+	then 
+		list.add( "Rule 627" ); 
+end 
+rule "rule 628" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "628") 
+	then 
+		list.add( "Rule 628" ); 
+end 
+rule "rule 629" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "629") 
+	then 
+		list.add( "Rule 629" ); 
+end 
+rule "rule 630" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "630") 
+	then 
+		list.add( "Rule 630" ); 
+end 
+rule "rule 631" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "631") 
+	then 
+		list.add( "Rule 631" ); 
+end 
+rule "rule 632" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "632") 
+	then 
+		list.add( "Rule 632" ); 
+end 
+rule "rule 633" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "633") 
+	then 
+		list.add( "Rule 633" ); 
+end 
+rule "rule 634" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "634") 
+	then 
+		list.add( "Rule 634" ); 
+end 
+rule "rule 635" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "635") 
+	then 
+		list.add( "Rule 635" ); 
+end 
+rule "rule 636" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "636") 
+	then 
+		list.add( "Rule 636" ); 
+end 
+rule "rule 637" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "637") 
+	then 
+		list.add( "Rule 637" ); 
+end 
+rule "rule 638" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "638") 
+	then 
+		list.add( "Rule 638" ); 
+end 
+rule "rule 639" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "639") 
+	then 
+		list.add( "Rule 639" ); 
+end 
+rule "rule 640" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "640") 
+	then 
+		list.add( "Rule 640" ); 
+end 
+rule "rule 641" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "641") 
+	then 
+		list.add( "Rule 641" ); 
+end 
+rule "rule 642" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "642") 
+	then 
+		list.add( "Rule 642" ); 
+end 
+rule "rule 643" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "643") 
+	then 
+		list.add( "Rule 643" ); 
+end 
+rule "rule 644" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "644") 
+	then 
+		list.add( "Rule 644" ); 
+end 
+rule "rule 645" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "645") 
+	then 
+		list.add( "Rule 645" ); 
+end 
+rule "rule 646" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "646") 
+	then 
+		list.add( "Rule 646" ); 
+end 
+rule "rule 647" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "647") 
+	then 
+		list.add( "Rule 647" ); 
+end 
+rule "rule 648" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "648") 
+	then 
+		list.add( "Rule 648" ); 
+end 
+rule "rule 649" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "649") 
+	then 
+		list.add( "Rule 649" ); 
+end 
+rule "rule 650" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "650") 
+	then 
+		list.add( "Rule 650" ); 
+end 
+rule "rule 651" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "651") 
+	then 
+		list.add( "Rule 651" ); 
+end 
+rule "rule 652" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "652") 
+	then 
+		list.add( "Rule 652" ); 
+end 
+rule "rule 653" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "653") 
+	then 
+		list.add( "Rule 653" ); 
+end 
+rule "rule 654" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "654") 
+	then 
+		list.add( "Rule 654" ); 
+end 
+rule "rule 655" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "655") 
+	then 
+		list.add( "Rule 655" ); 
+end 
+rule "rule 656" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "656") 
+	then 
+		list.add( "Rule 656" ); 
+end 
+rule "rule 657" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "657") 
+	then 
+		list.add( "Rule 657" ); 
+end 
+rule "rule 658" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "658") 
+	then 
+		list.add( "Rule 658" ); 
+end 
+rule "rule 659" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "659") 
+	then 
+		list.add( "Rule 659" ); 
+end 
+rule "rule 660" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "660") 
+	then 
+		list.add( "Rule 660" ); 
+end 
+rule "rule 661" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "661") 
+	then 
+		list.add( "Rule 661" ); 
+end 
+rule "rule 662" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "662") 
+	then 
+		list.add( "Rule 662" ); 
+end 
+rule "rule 663" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "663") 
+	then 
+		list.add( "Rule 663" ); 
+end 
+rule "rule 664" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "664") 
+	then 
+		list.add( "Rule 664" ); 
+end 
+rule "rule 665" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "665") 
+	then 
+		list.add( "Rule 665" ); 
+end 
+rule "rule 666" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "666") 
+	then 
+		list.add( "Rule 666" ); 
+end 
+rule "rule 667" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "667") 
+	then 
+		list.add( "Rule 667" ); 
+end 
+rule "rule 668" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "668") 
+	then 
+		list.add( "Rule 668" ); 
+end 
+rule "rule 669" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "669") 
+	then 
+		list.add( "Rule 669" ); 
+end 
+rule "rule 670" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "670") 
+	then 
+		list.add( "Rule 670" ); 
+end 
+rule "rule 671" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "671") 
+	then 
+		list.add( "Rule 671" ); 
+end 
+rule "rule 672" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "672") 
+	then 
+		list.add( "Rule 672" ); 
+end 
+rule "rule 673" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "673") 
+	then 
+		list.add( "Rule 673" ); 
+end 
+rule "rule 674" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "674") 
+	then 
+		list.add( "Rule 674" ); 
+end 
+rule "rule 675" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "675") 
+	then 
+		list.add( "Rule 675" ); 
+end 
+rule "rule 676" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "676") 
+	then 
+		list.add( "Rule 676" ); 
+end 
+rule "rule 677" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "677") 
+	then 
+		list.add( "Rule 677" ); 
+end 
+rule "rule 678" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "678") 
+	then 
+		list.add( "Rule 678" ); 
+end 
+rule "rule 679" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "679") 
+	then 
+		list.add( "Rule 679" ); 
+end 
+rule "rule 680" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "680") 
+	then 
+		list.add( "Rule 680" ); 
+end 
+rule "rule 681" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "681") 
+	then 
+		list.add( "Rule 681" ); 
+end 
+rule "rule 682" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "682") 
+	then 
+		list.add( "Rule 682" ); 
+end 
+rule "rule 683" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "683") 
+	then 
+		list.add( "Rule 683" ); 
+end 
+rule "rule 684" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "684") 
+	then 
+		list.add( "Rule 684" ); 
+end 
+rule "rule 685" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "685") 
+	then 
+		list.add( "Rule 685" ); 
+end 
+rule "rule 686" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "686") 
+	then 
+		list.add( "Rule 686" ); 
+end 
+rule "rule 687" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "687") 
+	then 
+		list.add( "Rule 687" ); 
+end 
+rule "rule 688" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "688") 
+	then 
+		list.add( "Rule 688" ); 
+end 
+rule "rule 689" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "689") 
+	then 
+		list.add( "Rule 689" ); 
+end 
+rule "rule 690" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "690") 
+	then 
+		list.add( "Rule 690" ); 
+end 
+rule "rule 691" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "691") 
+	then 
+		list.add( "Rule 691" ); 
+end 
+rule "rule 692" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "692") 
+	then 
+		list.add( "Rule 692" ); 
+end 
+rule "rule 693" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "693") 
+	then 
+		list.add( "Rule 693" ); 
+end 
+rule "rule 694" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "694") 
+	then 
+		list.add( "Rule 694" ); 
+end 
+rule "rule 695" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "695") 
+	then 
+		list.add( "Rule 695" ); 
+end 
+rule "rule 696" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "696") 
+	then 
+		list.add( "Rule 696" ); 
+end 
+rule "rule 697" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "697") 
+	then 
+		list.add( "Rule 697" ); 
+end 
+rule "rule 698" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "698") 
+	then 
+		list.add( "Rule 698" ); 
+end 
+rule "rule 699" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "699") 
+	then 
+		list.add( "Rule 699" ); 
+end 
+rule "rule 700" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "700") 
+	then 
+		list.add( "Rule 700" ); 
+end 
+rule "rule 701" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "701") 
+	then 
+		list.add( "Rule 701" ); 
+end 
+rule "rule 702" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "702") 
+	then 
+		list.add( "Rule 702" ); 
+end 
+rule "rule 703" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "703") 
+	then 
+		list.add( "Rule 703" ); 
+end 
+rule "rule 704" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "704") 
+	then 
+		list.add( "Rule 704" ); 
+end 
+rule "rule 705" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "705") 
+	then 
+		list.add( "Rule 705" ); 
+end 
+rule "rule 706" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "706") 
+	then 
+		list.add( "Rule 706" ); 
+end 
+rule "rule 707" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "707") 
+	then 
+		list.add( "Rule 707" ); 
+end 
+rule "rule 708" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "708") 
+	then 
+		list.add( "Rule 708" ); 
+end 
+rule "rule 709" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "709") 
+	then 
+		list.add( "Rule 709" ); 
+end 
+rule "rule 710" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "710") 
+	then 
+		list.add( "Rule 710" ); 
+end 
+rule "rule 711" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "711") 
+	then 
+		list.add( "Rule 711" ); 
+end 
+rule "rule 712" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "712") 
+	then 
+		list.add( "Rule 712" ); 
+end 
+rule "rule 713" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "713") 
+	then 
+		list.add( "Rule 713" ); 
+end 
+rule "rule 714" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "714") 
+	then 
+		list.add( "Rule 714" ); 
+end 
+rule "rule 715" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "715") 
+	then 
+		list.add( "Rule 715" ); 
+end 
+rule "rule 716" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "716") 
+	then 
+		list.add( "Rule 716" ); 
+end 
+rule "rule 717" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "717") 
+	then 
+		list.add( "Rule 717" ); 
+end 
+rule "rule 718" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "718") 
+	then 
+		list.add( "Rule 718" ); 
+end 
+rule "rule 719" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "719") 
+	then 
+		list.add( "Rule 719" ); 
+end 
+rule "rule 720" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "720") 
+	then 
+		list.add( "Rule 720" ); 
+end 
+rule "rule 721" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "721") 
+	then 
+		list.add( "Rule 721" ); 
+end 
+rule "rule 722" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "722") 
+	then 
+		list.add( "Rule 722" ); 
+end 
+rule "rule 723" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "723") 
+	then 
+		list.add( "Rule 723" ); 
+end 
+rule "rule 724" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "724") 
+	then 
+		list.add( "Rule 724" ); 
+end 
+rule "rule 725" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "725") 
+	then 
+		list.add( "Rule 725" ); 
+end 
+rule "rule 726" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "726") 
+	then 
+		list.add( "Rule 726" ); 
+end 
+rule "rule 727" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "727") 
+	then 
+		list.add( "Rule 727" ); 
+end 
+rule "rule 728" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "728") 
+	then 
+		list.add( "Rule 728" ); 
+end 
+rule "rule 729" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "729") 
+	then 
+		list.add( "Rule 729" ); 
+end 
+rule "rule 730" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "730") 
+	then 
+		list.add( "Rule 730" ); 
+end 
+rule "rule 731" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "731") 
+	then 
+		list.add( "Rule 731" ); 
+end 
+rule "rule 732" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "732") 
+	then 
+		list.add( "Rule 732" ); 
+end 
+rule "rule 733" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "733") 
+	then 
+		list.add( "Rule 733" ); 
+end 
+rule "rule 734" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "734") 
+	then 
+		list.add( "Rule 734" ); 
+end 
+rule "rule 735" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "735") 
+	then 
+		list.add( "Rule 735" ); 
+end 
+rule "rule 736" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "736") 
+	then 
+		list.add( "Rule 736" ); 
+end 
+rule "rule 737" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "737") 
+	then 
+		list.add( "Rule 737" ); 
+end 
+rule "rule 738" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "738") 
+	then 
+		list.add( "Rule 738" ); 
+end 
+rule "rule 739" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "739") 
+	then 
+		list.add( "Rule 739" ); 
+end 
+rule "rule 740" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "740") 
+	then 
+		list.add( "Rule 740" ); 
+end 
+rule "rule 741" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "741") 
+	then 
+		list.add( "Rule 741" ); 
+end 
+rule "rule 742" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "742") 
+	then 
+		list.add( "Rule 742" ); 
+end 
+rule "rule 743" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "743") 
+	then 
+		list.add( "Rule 743" ); 
+end 
+rule "rule 744" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "744") 
+	then 
+		list.add( "Rule 744" ); 
+end 
+rule "rule 745" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "745") 
+	then 
+		list.add( "Rule 745" ); 
+end 
+rule "rule 746" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "746") 
+	then 
+		list.add( "Rule 746" ); 
+end 
+rule "rule 747" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "747") 
+	then 
+		list.add( "Rule 747" ); 
+end 
+rule "rule 748" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "748") 
+	then 
+		list.add( "Rule 748" ); 
+end 
+rule "rule 749" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "749") 
+	then 
+		list.add( "Rule 749" ); 
+end 
+rule "rule 750" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "750") 
+	then 
+		list.add( "Rule 750" ); 
+end 
+rule "rule 751" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "751") 
+	then 
+		list.add( "Rule 751" ); 
+end 
+rule "rule 752" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "752") 
+	then 
+		list.add( "Rule 752" ); 
+end 
+rule "rule 753" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "753") 
+	then 
+		list.add( "Rule 753" ); 
+end 
+rule "rule 754" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "754") 
+	then 
+		list.add( "Rule 754" ); 
+end 
+rule "rule 755" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "755") 
+	then 
+		list.add( "Rule 755" ); 
+end 
+rule "rule 756" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "756") 
+	then 
+		list.add( "Rule 756" ); 
+end 
+rule "rule 757" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "757") 
+	then 
+		list.add( "Rule 757" ); 
+end 
+rule "rule 758" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "758") 
+	then 
+		list.add( "Rule 758" ); 
+end 
+rule "rule 759" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "759") 
+	then 
+		list.add( "Rule 759" ); 
+end 
+rule "rule 760" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "760") 
+	then 
+		list.add( "Rule 760" ); 
+end 
+rule "rule 761" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "761") 
+	then 
+		list.add( "Rule 761" ); 
+end 
+rule "rule 762" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "762") 
+	then 
+		list.add( "Rule 762" ); 
+end 
+rule "rule 763" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "763") 
+	then 
+		list.add( "Rule 763" ); 
+end 
+rule "rule 764" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "764") 
+	then 
+		list.add( "Rule 764" ); 
+end 
+rule "rule 765" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "765") 
+	then 
+		list.add( "Rule 765" ); 
+end 
+rule "rule 766" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "766") 
+	then 
+		list.add( "Rule 766" ); 
+end 
+rule "rule 767" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "767") 
+	then 
+		list.add( "Rule 767" ); 
+end 
+rule "rule 768" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "768") 
+	then 
+		list.add( "Rule 768" ); 
+end 
+rule "rule 769" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "769") 
+	then 
+		list.add( "Rule 769" ); 
+end 
+rule "rule 770" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "770") 
+	then 
+		list.add( "Rule 770" ); 
+end 
+rule "rule 771" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "771") 
+	then 
+		list.add( "Rule 771" ); 
+end 
+rule "rule 772" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "772") 
+	then 
+		list.add( "Rule 772" ); 
+end 
+rule "rule 773" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "773") 
+	then 
+		list.add( "Rule 773" ); 
+end 
+rule "rule 774" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "774") 
+	then 
+		list.add( "Rule 774" ); 
+end 
+rule "rule 775" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "775") 
+	then 
+		list.add( "Rule 775" ); 
+end 
+rule "rule 776" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "776") 
+	then 
+		list.add( "Rule 776" ); 
+end 
+rule "rule 777" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "777") 
+	then 
+		list.add( "Rule 777" ); 
+end 
+rule "rule 778" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "778") 
+	then 
+		list.add( "Rule 778" ); 
+end 
+rule "rule 779" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "779") 
+	then 
+		list.add( "Rule 779" ); 
+end 
+rule "rule 780" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "780") 
+	then 
+		list.add( "Rule 780" ); 
+end 
+rule "rule 781" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "781") 
+	then 
+		list.add( "Rule 781" ); 
+end 
+rule "rule 782" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "782") 
+	then 
+		list.add( "Rule 782" ); 
+end 
+rule "rule 783" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "783") 
+	then 
+		list.add( "Rule 783" ); 
+end 
+rule "rule 784" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "784") 
+	then 
+		list.add( "Rule 784" ); 
+end 
+rule "rule 785" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "785") 
+	then 
+		list.add( "Rule 785" ); 
+end 
+rule "rule 786" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "786") 
+	then 
+		list.add( "Rule 786" ); 
+end 
+rule "rule 787" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "787") 
+	then 
+		list.add( "Rule 787" ); 
+end 
+rule "rule 788" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "788") 
+	then 
+		list.add( "Rule 788" ); 
+end 
+rule "rule 789" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "789") 
+	then 
+		list.add( "Rule 789" ); 
+end 
+rule "rule 790" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "790") 
+	then 
+		list.add( "Rule 790" ); 
+end 
+rule "rule 791" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "791") 
+	then 
+		list.add( "Rule 791" ); 
+end 
+rule "rule 792" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "792") 
+	then 
+		list.add( "Rule 792" ); 
+end 
+rule "rule 793" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "793") 
+	then 
+		list.add( "Rule 793" ); 
+end 
+rule "rule 794" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "794") 
+	then 
+		list.add( "Rule 794" ); 
+end 
+rule "rule 795" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "795") 
+	then 
+		list.add( "Rule 795" ); 
+end 
+rule "rule 796" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "796") 
+	then 
+		list.add( "Rule 796" ); 
+end 
+rule "rule 797" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "797") 
+	then 
+		list.add( "Rule 797" ); 
+end 
+rule "rule 798" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "798") 
+	then 
+		list.add( "Rule 798" ); 
+end 
+rule "rule 799" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "799") 
+	then 
+		list.add( "Rule 799" ); 
+end 
+rule "rule 800" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "800") 
+	then 
+		list.add( "Rule 800" ); 
+end 
+rule "rule 801" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "801") 
+	then 
+		list.add( "Rule 801" ); 
+end 
+rule "rule 802" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "802") 
+	then 
+		list.add( "Rule 802" ); 
+end 
+rule "rule 803" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "803") 
+	then 
+		list.add( "Rule 803" ); 
+end 
+rule "rule 804" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "804") 
+	then 
+		list.add( "Rule 804" ); 
+end 
+rule "rule 805" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "805") 
+	then 
+		list.add( "Rule 805" ); 
+end 
+rule "rule 806" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "806") 
+	then 
+		list.add( "Rule 806" ); 
+end 
+rule "rule 807" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "807") 
+	then 
+		list.add( "Rule 807" ); 
+end 
+rule "rule 808" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "808") 
+	then 
+		list.add( "Rule 808" ); 
+end 
+rule "rule 809" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "809") 
+	then 
+		list.add( "Rule 809" ); 
+end 
+rule "rule 810" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "810") 
+	then 
+		list.add( "Rule 810" ); 
+end 
+rule "rule 811" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "811") 
+	then 
+		list.add( "Rule 811" ); 
+end 
+rule "rule 812" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "812") 
+	then 
+		list.add( "Rule 812" ); 
+end 
+rule "rule 813" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "813") 
+	then 
+		list.add( "Rule 813" ); 
+end 
+rule "rule 814" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "814") 
+	then 
+		list.add( "Rule 814" ); 
+end 
+rule "rule 815" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "815") 
+	then 
+		list.add( "Rule 815" ); 
+end 
+rule "rule 816" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "816") 
+	then 
+		list.add( "Rule 816" ); 
+end 
+rule "rule 817" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "817") 
+	then 
+		list.add( "Rule 817" ); 
+end 
+rule "rule 818" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "818") 
+	then 
+		list.add( "Rule 818" ); 
+end 
+rule "rule 819" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "819") 
+	then 
+		list.add( "Rule 819" ); 
+end 
+rule "rule 820" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "820") 
+	then 
+		list.add( "Rule 820" ); 
+end 
+rule "rule 821" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "821") 
+	then 
+		list.add( "Rule 821" ); 
+end 
+rule "rule 822" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "822") 
+	then 
+		list.add( "Rule 822" ); 
+end 
+rule "rule 823" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "823") 
+	then 
+		list.add( "Rule 823" ); 
+end 
+rule "rule 824" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "824") 
+	then 
+		list.add( "Rule 824" ); 
+end 
+rule "rule 825" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "825") 
+	then 
+		list.add( "Rule 825" ); 
+end 
+rule "rule 826" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "826") 
+	then 
+		list.add( "Rule 826" ); 
+end 
+rule "rule 827" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "827") 
+	then 
+		list.add( "Rule 827" ); 
+end 
+rule "rule 828" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "828") 
+	then 
+		list.add( "Rule 828" ); 
+end 
+rule "rule 829" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "829") 
+	then 
+		list.add( "Rule 829" ); 
+end 
+rule "rule 830" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "830") 
+	then 
+		list.add( "Rule 830" ); 
+end 
+rule "rule 831" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "831") 
+	then 
+		list.add( "Rule 831" ); 
+end 
+rule "rule 832" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "832") 
+	then 
+		list.add( "Rule 832" ); 
+end 
+rule "rule 833" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "833") 
+	then 
+		list.add( "Rule 833" ); 
+end 
+rule "rule 834" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "834") 
+	then 
+		list.add( "Rule 834" ); 
+end 
+rule "rule 835" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "835") 
+	then 
+		list.add( "Rule 835" ); 
+end 
+rule "rule 836" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "836") 
+	then 
+		list.add( "Rule 836" ); 
+end 
+rule "rule 837" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "837") 
+	then 
+		list.add( "Rule 837" ); 
+end 
+rule "rule 838" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "838") 
+	then 
+		list.add( "Rule 838" ); 
+end 
+rule "rule 839" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "839") 
+	then 
+		list.add( "Rule 839" ); 
+end 
+rule "rule 840" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "840") 
+	then 
+		list.add( "Rule 840" ); 
+end 
+rule "rule 841" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "841") 
+	then 
+		list.add( "Rule 841" ); 
+end 
+rule "rule 842" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "842") 
+	then 
+		list.add( "Rule 842" ); 
+end 
+rule "rule 843" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "843") 
+	then 
+		list.add( "Rule 843" ); 
+end 
+rule "rule 844" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "844") 
+	then 
+		list.add( "Rule 844" ); 
+end 
+rule "rule 845" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "845") 
+	then 
+		list.add( "Rule 845" ); 
+end 
+rule "rule 846" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "846") 
+	then 
+		list.add( "Rule 846" ); 
+end 
+rule "rule 847" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "847") 
+	then 
+		list.add( "Rule 847" ); 
+end 
+rule "rule 848" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "848") 
+	then 
+		list.add( "Rule 848" ); 
+end 
+rule "rule 849" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "849") 
+	then 
+		list.add( "Rule 849" ); 
+end 
+rule "rule 850" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "850") 
+	then 
+		list.add( "Rule 850" ); 
+end 
+rule "rule 851" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "851") 
+	then 
+		list.add( "Rule 851" ); 
+end 
+rule "rule 852" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "852") 
+	then 
+		list.add( "Rule 852" ); 
+end 
+rule "rule 853" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "853") 
+	then 
+		list.add( "Rule 853" ); 
+end 
+rule "rule 854" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "854") 
+	then 
+		list.add( "Rule 854" ); 
+end 
+rule "rule 855" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "855") 
+	then 
+		list.add( "Rule 855" ); 
+end 
+rule "rule 856" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "856") 
+	then 
+		list.add( "Rule 856" ); 
+end 
+rule "rule 857" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "857") 
+	then 
+		list.add( "Rule 857" ); 
+end 
+rule "rule 858" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "858") 
+	then 
+		list.add( "Rule 858" ); 
+end 
+rule "rule 859" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "859") 
+	then 
+		list.add( "Rule 859" ); 
+end 
+rule "rule 860" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "860") 
+	then 
+		list.add( "Rule 860" ); 
+end 
+rule "rule 861" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "861") 
+	then 
+		list.add( "Rule 861" ); 
+end 
+rule "rule 862" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "862") 
+	then 
+		list.add( "Rule 862" ); 
+end 
+rule "rule 863" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "863") 
+	then 
+		list.add( "Rule 863" ); 
+end 
+rule "rule 864" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "864") 
+	then 
+		list.add( "Rule 864" ); 
+end 
+rule "rule 865" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "865") 
+	then 
+		list.add( "Rule 865" ); 
+end 
+rule "rule 866" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "866") 
+	then 
+		list.add( "Rule 866" ); 
+end 
+rule "rule 867" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "867") 
+	then 
+		list.add( "Rule 867" ); 
+end 
+rule "rule 868" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "868") 
+	then 
+		list.add( "Rule 868" ); 
+end 
+rule "rule 869" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "869") 
+	then 
+		list.add( "Rule 869" ); 
+end 
+rule "rule 870" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "870") 
+	then 
+		list.add( "Rule 870" ); 
+end 
+rule "rule 871" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "871") 
+	then 
+		list.add( "Rule 871" ); 
+end 
+rule "rule 872" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "872") 
+	then 
+		list.add( "Rule 872" ); 
+end 
+rule "rule 873" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "873") 
+	then 
+		list.add( "Rule 873" ); 
+end 
+rule "rule 874" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "874") 
+	then 
+		list.add( "Rule 874" ); 
+end 
+rule "rule 875" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "875") 
+	then 
+		list.add( "Rule 875" ); 
+end 
+rule "rule 876" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "876") 
+	then 
+		list.add( "Rule 876" ); 
+end 
+rule "rule 877" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "877") 
+	then 
+		list.add( "Rule 877" ); 
+end 
+rule "rule 878" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "878") 
+	then 
+		list.add( "Rule 878" ); 
+end 
+rule "rule 879" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "879") 
+	then 
+		list.add( "Rule 879" ); 
+end 
+rule "rule 880" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "880") 
+	then 
+		list.add( "Rule 880" ); 
+end 
+rule "rule 881" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "881") 
+	then 
+		list.add( "Rule 881" ); 
+end 
+rule "rule 882" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "882") 
+	then 
+		list.add( "Rule 882" ); 
+end 
+rule "rule 883" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "883") 
+	then 
+		list.add( "Rule 883" ); 
+end 
+rule "rule 884" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "884") 
+	then 
+		list.add( "Rule 884" ); 
+end 
+rule "rule 885" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "885") 
+	then 
+		list.add( "Rule 885" ); 
+end 
+rule "rule 886" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "886") 
+	then 
+		list.add( "Rule 886" ); 
+end 
+rule "rule 887" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "887") 
+	then 
+		list.add( "Rule 887" ); 
+end 
+rule "rule 888" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "888") 
+	then 
+		list.add( "Rule 888" ); 
+end 
+rule "rule 889" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "889") 
+	then 
+		list.add( "Rule 889" ); 
+end 
+rule "rule 890" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "890") 
+	then 
+		list.add( "Rule 890" ); 
+end 
+rule "rule 891" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "891") 
+	then 
+		list.add( "Rule 891" ); 
+end 
+rule "rule 892" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "892") 
+	then 
+		list.add( "Rule 892" ); 
+end 
+rule "rule 893" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "893") 
+	then 
+		list.add( "Rule 893" ); 
+end 
+rule "rule 894" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "894") 
+	then 
+		list.add( "Rule 894" ); 
+end 
+rule "rule 895" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "895") 
+	then 
+		list.add( "Rule 895" ); 
+end 
+rule "rule 896" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "896") 
+	then 
+		list.add( "Rule 896" ); 
+end 
+rule "rule 897" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "897") 
+	then 
+		list.add( "Rule 897" ); 
+end 
+rule "rule 898" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "898") 
+	then 
+		list.add( "Rule 898" ); 
+end 
+rule "rule 899" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "899") 
+	then 
+		list.add( "Rule 899" ); 
+end 
+rule "rule 900" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "900") 
+	then 
+		list.add( "Rule 900" ); 
+end 
+rule "rule 901" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "901") 
+	then 
+		list.add( "Rule 901" ); 
+end 
+rule "rule 902" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "902") 
+	then 
+		list.add( "Rule 902" ); 
+end 
+rule "rule 903" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "903") 
+	then 
+		list.add( "Rule 903" ); 
+end 
+rule "rule 904" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "904") 
+	then 
+		list.add( "Rule 904" ); 
+end 
+rule "rule 905" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "905") 
+	then 
+		list.add( "Rule 905" ); 
+end 
+rule "rule 906" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "906") 
+	then 
+		list.add( "Rule 906" ); 
+end 
+rule "rule 907" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "907") 
+	then 
+		list.add( "Rule 907" ); 
+end 
+rule "rule 908" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "908") 
+	then 
+		list.add( "Rule 908" ); 
+end 
+rule "rule 909" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "909") 
+	then 
+		list.add( "Rule 909" ); 
+end 
+rule "rule 910" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "910") 
+	then 
+		list.add( "Rule 910" ); 
+end 
+rule "rule 911" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "911") 
+	then 
+		list.add( "Rule 911" ); 
+end 
+rule "rule 912" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "912") 
+	then 
+		list.add( "Rule 912" ); 
+end 
+rule "rule 913" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "913") 
+	then 
+		list.add( "Rule 913" ); 
+end 
+rule "rule 914" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "914") 
+	then 
+		list.add( "Rule 914" ); 
+end 
+rule "rule 915" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "915") 
+	then 
+		list.add( "Rule 915" ); 
+end 
+rule "rule 916" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "916") 
+	then 
+		list.add( "Rule 916" ); 
+end 
+rule "rule 917" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "917") 
+	then 
+		list.add( "Rule 917" ); 
+end 
+rule "rule 918" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "918") 
+	then 
+		list.add( "Rule 918" ); 
+end 
+rule "rule 919" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "919") 
+	then 
+		list.add( "Rule 919" ); 
+end 
+rule "rule 920" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "920") 
+	then 
+		list.add( "Rule 920" ); 
+end 
+rule "rule 921" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "921") 
+	then 
+		list.add( "Rule 921" ); 
+end 
+rule "rule 922" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "922") 
+	then 
+		list.add( "Rule 922" ); 
+end 
+rule "rule 923" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "923") 
+	then 
+		list.add( "Rule 923" ); 
+end 
+rule "rule 924" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "924") 
+	then 
+		list.add( "Rule 924" ); 
+end 
+rule "rule 925" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "925") 
+	then 
+		list.add( "Rule 925" ); 
+end 
+rule "rule 926" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "926") 
+	then 
+		list.add( "Rule 926" ); 
+end 
+rule "rule 927" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "927") 
+	then 
+		list.add( "Rule 927" ); 
+end 
+rule "rule 928" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "928") 
+	then 
+		list.add( "Rule 928" ); 
+end 
+rule "rule 929" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "929") 
+	then 
+		list.add( "Rule 929" ); 
+end 
+rule "rule 930" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "930") 
+	then 
+		list.add( "Rule 930" ); 
+end 
+rule "rule 931" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "931") 
+	then 
+		list.add( "Rule 931" ); 
+end 
+rule "rule 932" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "932") 
+	then 
+		list.add( "Rule 932" ); 
+end 
+rule "rule 933" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "933") 
+	then 
+		list.add( "Rule 933" ); 
+end 
+rule "rule 934" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "934") 
+	then 
+		list.add( "Rule 934" ); 
+end 
+rule "rule 935" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "935") 
+	then 
+		list.add( "Rule 935" ); 
+end 
+rule "rule 936" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "936") 
+	then 
+		list.add( "Rule 936" ); 
+end 
+rule "rule 937" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "937") 
+	then 
+		list.add( "Rule 937" ); 
+end 
+rule "rule 938" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "938") 
+	then 
+		list.add( "Rule 938" ); 
+end 
+rule "rule 939" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "939") 
+	then 
+		list.add( "Rule 939" ); 
+end 
+rule "rule 940" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "940") 
+	then 
+		list.add( "Rule 940" ); 
+end 
+rule "rule 941" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "941") 
+	then 
+		list.add( "Rule 941" ); 
+end 
+rule "rule 942" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "942") 
+	then 
+		list.add( "Rule 942" ); 
+end 
+rule "rule 943" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "943") 
+	then 
+		list.add( "Rule 943" ); 
+end 
+rule "rule 944" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "944") 
+	then 
+		list.add( "Rule 944" ); 
+end 
+rule "rule 945" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "945") 
+	then 
+		list.add( "Rule 945" ); 
+end 
+rule "rule 946" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "946") 
+	then 
+		list.add( "Rule 946" ); 
+end 
+rule "rule 947" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "947") 
+	then 
+		list.add( "Rule 947" ); 
+end 
+rule "rule 948" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "948") 
+	then 
+		list.add( "Rule 948" ); 
+end 
+rule "rule 949" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "949") 
+	then 
+		list.add( "Rule 949" ); 
+end 
+rule "rule 950" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "950") 
+	then 
+		list.add( "Rule 950" ); 
+end 
+rule "rule 951" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "951") 
+	then 
+		list.add( "Rule 951" ); 
+end 
+rule "rule 952" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "952") 
+	then 
+		list.add( "Rule 952" ); 
+end 
+rule "rule 953" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "953") 
+	then 
+		list.add( "Rule 953" ); 
+end 
+rule "rule 954" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "954") 
+	then 
+		list.add( "Rule 954" ); 
+end 
+rule "rule 955" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "955") 
+	then 
+		list.add( "Rule 955" ); 
+end 
+rule "rule 956" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "956") 
+	then 
+		list.add( "Rule 956" ); 
+end 
+rule "rule 957" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "957") 
+	then 
+		list.add( "Rule 957" ); 
+end 
+rule "rule 958" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "958") 
+	then 
+		list.add( "Rule 958" ); 
+end 
+rule "rule 959" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "959") 
+	then 
+		list.add( "Rule 959" ); 
+end 
+rule "rule 960" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "960") 
+	then 
+		list.add( "Rule 960" ); 
+end 
+rule "rule 961" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "961") 
+	then 
+		list.add( "Rule 961" ); 
+end 
+rule "rule 962" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "962") 
+	then 
+		list.add( "Rule 962" ); 
+end 
+rule "rule 963" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "963") 
+	then 
+		list.add( "Rule 963" ); 
+end 
+rule "rule 964" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "964") 
+	then 
+		list.add( "Rule 964" ); 
+end 
+rule "rule 965" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "965") 
+	then 
+		list.add( "Rule 965" ); 
+end 
+rule "rule 966" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "966") 
+	then 
+		list.add( "Rule 966" ); 
+end 
+rule "rule 967" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "967") 
+	then 
+		list.add( "Rule 967" ); 
+end 
+rule "rule 968" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "968") 
+	then 
+		list.add( "Rule 968" ); 
+end 
+rule "rule 969" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "969") 
+	then 
+		list.add( "Rule 969" ); 
+end 
+rule "rule 970" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "970") 
+	then 
+		list.add( "Rule 970" ); 
+end 
+rule "rule 971" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "971") 
+	then 
+		list.add( "Rule 971" ); 
+end 
+rule "rule 972" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "972") 
+	then 
+		list.add( "Rule 972" ); 
+end 
+rule "rule 973" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "973") 
+	then 
+		list.add( "Rule 973" ); 
+end 
+rule "rule 974" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "974") 
+	then 
+		list.add( "Rule 974" ); 
+end 
+rule "rule 975" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "975") 
+	then 
+		list.add( "Rule 975" ); 
+end 
+rule "rule 976" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "976") 
+	then 
+		list.add( "Rule 976" ); 
+end 
+rule "rule 977" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "977") 
+	then 
+		list.add( "Rule 977" ); 
+end 
+rule "rule 978" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "978") 
+	then 
+		list.add( "Rule 978" ); 
+end 
+rule "rule 979" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "979") 
+	then 
+		list.add( "Rule 979" ); 
+end 
+rule "rule 980" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "980") 
+	then 
+		list.add( "Rule 980" ); 
+end 
+rule "rule 981" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "981") 
+	then 
+		list.add( "Rule 981" ); 
+end 
+rule "rule 982" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "982") 
+	then 
+		list.add( "Rule 982" ); 
+end 
+rule "rule 983" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "983") 
+	then 
+		list.add( "Rule 983" ); 
+end 
+rule "rule 984" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "984") 
+	then 
+		list.add( "Rule 984" ); 
+end 
+rule "rule 985" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "985") 
+	then 
+		list.add( "Rule 985" ); 
+end 
+rule "rule 986" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "986") 
+	then 
+		list.add( "Rule 986" ); 
+end 
+rule "rule 987" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "987") 
+	then 
+		list.add( "Rule 987" ); 
+end 
+rule "rule 988" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "988") 
+	then 
+		list.add( "Rule 988" ); 
+end 
+rule "rule 989" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "989") 
+	then 
+		list.add( "Rule 989" ); 
+end 
+rule "rule 990" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "990") 
+	then 
+		list.add( "Rule 990" ); 
+end 
+rule "rule 991" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "991") 
+	then 
+		list.add( "Rule 991" ); 
+end 
+rule "rule 992" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "992") 
+	then 
+		list.add( "Rule 992" ); 
+end 
+rule "rule 993" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "993") 
+	then 
+		list.add( "Rule 993" ); 
+end 
+rule "rule 994" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "994") 
+	then 
+		list.add( "Rule 994" ); 
+end 
+rule "rule 995" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "995") 
+	then 
+		list.add( "Rule 995" ); 
+end 
+rule "rule 996" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "996") 
+	then 
+		list.add( "Rule 996" ); 
+end 
+rule "rule 997" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "997") 
+	then 
+		list.add( "Rule 997" ); 
+end 
+rule "rule 998" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "998") 
+	then 
+		list.add( "Rule 998" ); 
+end 
+rule "rule 999" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "999") 
+	then 
+		list.add( "Rule 999" ); 
+end 
+rule "rule 1000" 
+	when 
+		message : Message( status == "10" ) 
+		Input : Sensor ( temperature  == "1000") 
+	then 
+		list.add( "Rule 1000" ); 
+end 
+
+
+
+

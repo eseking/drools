@@ -15,6 +15,11 @@
 
 package org.drools.compiler.integrationtests;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
+
 import org.drools.compiler.Cell;
 import org.drools.compiler.Cheese;
 import org.drools.compiler.CommonTestMethodBase;
@@ -26,6 +31,7 @@ import org.drools.compiler.Neighbor;
 import org.drools.compiler.Person;
 import org.drools.compiler.PersonInterface;
 import org.drools.compiler.Pet;
+import org.drools.compiler.Sensor;
 import org.drools.compiler.TotalHolder;
 import org.drools.core.common.InternalAgenda;
 import org.drools.core.common.InternalWorkingMemory;
@@ -42,10 +48,6 @@ import org.kie.api.event.rule.MatchCreatedEvent;
 import org.kie.api.runtime.KieSession;
 import org.kie.api.runtime.rule.FactHandle;
 import org.kie.internal.builder.conf.RuleEngineOption;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 public class ExecutionFlowControlTest extends CommonTestMethodBase {
 
@@ -1138,4 +1140,57 @@ public class ExecutionFlowControlTest extends CommonTestMethodBase {
         assertEquals( 3, ruleList.get(6));
         assertEquals( 3, ruleList.get(7));
     }
+    
+    enum RuleAmount{
+    	NUM_1000(1000),NUM_5000(5000),NUM_10000(10000),NUM_15000(15000);
+    	private int num;
+    	private RuleAmount(int num){
+    		this.num=num;
+    	}
+    	public int value(){
+    		return this.num;
+    	} 
+    }
+    
+    /**
+     * The cost of time increases linearly with number of rules
+     * Each 1000 rules increases about 2MS
+     * @throws Exception
+     */
+    @Test
+    public void testRulePerformance() throws Exception {
+    	/*
+    	 * when the rules number is 1000, The average cost time is 2.639 MS
+    	 * when the rules number is 5000, The average cost time is 10.20 MS
+    	 * when the rules number is 10000, The average cost time is 23.69 MS
+    	 * when the rules number is 15000, The average cost time is 30.19 MS
+    	 * 
+    	 */
+    	int size = RuleAmount.NUM_10000.value();
+    	KieBase kbase = loadKnowledgeBase("test_rulePerformance_"+size+".drl");
+    	//(1000-15000) requests simulations
+    	double average_time=0;
+    	Sensor sensor = new Sensor();
+	    sensor.setPressure(10);
+	    List<String> list = new ArrayList<String>();
+        for(int i=1;i<=size;i++){
+        	Long start = System.currentTimeMillis();
+        	KieSession ksession = kbase.newKieSession();
+        	ksession.setGlobal( "list", list );
+	        sensor.setTemperature(i);
+	        ksession.insert( sensor );
+	        ksession.fireAllRules();
+	        Long end = System.currentTimeMillis();
+	        ksession.dispose();
+	        assertEquals( "Rule Start should have been fired first", "Start",
+	                list.get( 0 ) );
+	        assertEquals( "Rule "+i+" should have been fired second", "Rule "+i,
+	                list.get( 1 ) );
+	        list.clear();
+	        long drools_time =end-start;
+	        average_time+=drools_time;
+        }
+        System.out.println("average time is : "+average_time/size);
+    }
+   
 }
